@@ -1,0 +1,8 @@
+export default {
+  VITE_YOUTUBE_DATA_API_CLIENT_ID: "CLIENT_ID",
+  VITE_YOUTUBE_DATA_API_KEY: "KEY",
+  VITE_YOUTUBE_DATA_API_SECRET: "SECRET",
+  VITE_YOUTUBE_DATA_API_URL: "https://www.googleapis.com",
+  VITE_YOUTUBE_DATA_API_VIDEOS_ENDPOINT: "/youtube/v3/videos",
+  TEST_VAR:'test'
+}
