@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Home Page matches snapshot 1`] = `
+<div>
+  <div
+    class="sc-dTvVRJ jvNhqL"
+  >
+    <div
+      class="sc-ggWZvA QVSmT"
+    >
+      <div
+        class="sc-bRKDuR ecbMmo"
+      >
+        <input
+          class="sc-hvigdm iMebNp"
+          name="search"
+          placeholder="Search"
+          spellcheck="true"
+          type="search"
+        />
+        <button
+          class="sc-fhHczv jvyIXk"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

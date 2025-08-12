@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Common component tests Loader matches snapshot 1`] = `
+<div>
+  <div
+    class="sc-bRKDuR fMrgJQ"
+  >
+    <svg
+      class="spinner"
+      viewBox="0 0 50 50"
+    >
+      <circle
+        class="path"
+        cx="25"
+        cy="25"
+        fill="none"
+        r="20"
+        stroke-width="5"
+      />
+    </svg>
+  </div>
+</div>
+`;
