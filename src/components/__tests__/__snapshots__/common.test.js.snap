@@ -4,6 +4,7 @@ exports[`Common component tests Loader matches snapshot 1`] = `
 <div>
   <div
     class="sc-bRKDuR fMrgJQ"
+    role="progressbar"
   >
     <svg
       class="spinner"

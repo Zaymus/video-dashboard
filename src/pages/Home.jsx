@@ -1,7 +1,9 @@
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useState, useMemo } from 'react';
 import styled from 'styled-components';
 import Header from "../components/Header/Header";
-import { getPopularVideos } from '../utils/api';
+import Loader from '../components/common/Loader';
+import useAPI from '../hooks/useAPI';
+import { API_ENDPOINTS, POPULAR_VIDEOS_REQUEST } from '../utils/constants';
 
 const Container = styled.div`
 `;
@@ -9,27 +11,31 @@ const Container = styled.div`
 const Home = () => {
   const [videos, setVideos] = useState([]);
   const [nextPageToken, setNextPageToken] = useState(null);
+  
+  const requestConfig = useMemo(() => ({
+    ...POPULAR_VIDEOS_REQUEST,
+    params: {
+      ...POPULAR_VIDEOS_REQUEST.params,
+      pageToken: nextPageToken
+    }
+  }), [nextPageToken]);
+  const { result, isLoading, hasError } = useAPI(API_ENDPOINTS.getVideos, requestConfig);
 
   useEffect(() => {
-    async function fetchData() {
-      const result = await getPopularVideos(nextPageToken);
-
-      if (nextPageToken === result.data.nextPageToken) return;
-      
-      setVideos(result.data.items);
+    if (result) {
+      setVideos(result.items);
+      setNextPageToken(prevToken =>
+        prevToken === result.nextPageToken ? prevToken : result.nextPageToken
+      );
     }
-
-    fetchData();
-
-    return () => {
-      setVideos([]);
-      setNextPageToken(null);
-    }
-  }, []);
+  }, [result])
 
   return (
     <Container>
         <Header />
+        {isLoading ? <Loader /> : hasError ? <p>{hasError}</p> : videos.map(video => {
+          return <p key={video.contentDetails.id}>{video.snippet.title}</p>;
+        })}
     </Container>
   );
 }

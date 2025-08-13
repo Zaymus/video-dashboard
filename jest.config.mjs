@@ -5,7 +5,6 @@
 
 /** @type {import('jest').Config} */
 const config = {
-  globals: {},
   testEnvironment: "jsdom",
   moduleFileExtensions: ["js", "json", "jsx", "node"],
   moduleNameMapper: {

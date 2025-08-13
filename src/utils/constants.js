@@ -13,6 +13,17 @@ for (const key in env_vars) {
 
 export { env };
 
+export const API_ENDPOINTS = {
+  getVideos: '/api/youtube/v3/videos',
+}
+
+export const isURLValid = (url) => {
+  if (!url) return false;
+
+  const endpoint = url.split('?')[0];
+  return Object.values(API_ENDPOINTS).includes(endpoint);
+}
+
 const REQUEST_HEADERS = {
   headers: {
     "Content-Type": 'application/json',

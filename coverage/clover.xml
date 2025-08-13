@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1754963555870" clover="3.2.0">
-  <project timestamp="1754963555870" name="All files">
-    <metrics statements="54" coveredstatements="53" conditionals="13" coveredconditionals="11" methods="14" coveredmethods="14" elements="81" coveredelements="78" complexity="0" loc="54" ncloc="54" packages="6" files="7" classes="7"/>
+<coverage generated="1755110485474" clover="3.2.0">
+  <project timestamp="1755110485474" name="All files">
+    <metrics statements="77" coveredstatements="77" conditionals="30" coveredconditionals="27" methods="21" coveredmethods="21" elements="128" coveredelements="125" complexity="0" loc="77" ncloc="77" packages="6" files="7" classes="7"/>
     <package name="components.Header">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Header.jsx" path="E:\Code\InterviewPrep\video-dashboard\src\components\Header\Header.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
       </file>
     </package>
     <package name="components.SearchBar">
@@ -19,28 +19,55 @@
         <line num="15" count="3" type="stmt"/>
         <line num="29" count="3" type="stmt"/>
         <line num="45" count="3" type="stmt"/>
-        <line num="46" count="8" type="stmt"/>
-        <line num="48" count="8" type="stmt"/>
+        <line num="46" count="11" type="stmt"/>
+        <line num="48" count="11" type="stmt"/>
         <line num="49" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="50" count="2" type="stmt"/>
         <line num="51" count="2" type="stmt"/>
-        <line num="55" count="8" type="stmt"/>
+        <line num="55" count="11" type="stmt"/>
         <line num="56" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="57" count="1" type="stmt"/>
-        <line num="61" count="8" type="stmt"/>
+        <line num="61" count="11" type="stmt"/>
       </file>
     </package>
     <package name="components.common">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Loader.jsx" path="E:\Code\InterviewPrep\video-dashboard\src\components\common\Loader.jsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
       </file>
     </package>
     <package name="hooks">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <metrics statements="32" coveredstatements="32" conditionals="12" coveredconditionals="11" methods="10" coveredmethods="10"/>
+      <file name="useAPI.js" path="E:\Code\InterviewPrep\video-dashboard\src\hooks\useAPI.js">
+        <metrics statements="24" coveredstatements="24" conditionals="12" coveredconditionals="11" methods="6" coveredmethods="6"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="16" type="stmt"/>
+        <line num="7" count="16" type="stmt"/>
+        <line num="8" count="16" type="stmt"/>
+        <line num="10" count="16" type="stmt"/>
+        <line num="11" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="22" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="28" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="34" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="40" count="5" type="stmt"/>
+        <line num="41" count="5" type="stmt"/>
+        <line num="45" count="16" type="stmt"/>
+      </file>
       <file name="useDebounce.js" path="E:\Code\InterviewPrep\video-dashboard\src\hooks\useDebounce.js">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="3" count="1" type="stmt"/>
@@ -54,37 +81,28 @@
       </file>
     </package>
     <package name="pages">
-      <metrics statements="13" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+      <metrics statements="13" coveredstatements="13" conditionals="8" coveredconditionals="7" methods="5" coveredmethods="5"/>
       <file name="Home.jsx" path="E:\Code\InterviewPrep\video-dashboard\src\pages\Home.jsx">
-        <metrics statements="13" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <metrics statements="13" coveredstatements="13" conditionals="8" coveredconditionals="7" methods="5" coveredmethods="5"/>
+        <line num="8" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="26" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
       </file>
     </package>
     <package name="utils">
-      <metrics statements="14" coveredstatements="14" conditionals="7" coveredconditionals="6" methods="1" coveredmethods="1"/>
-      <file name="api.js" path="E:\Code\InterviewPrep\video-dashboard\src\utils\api.js">
-        <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="4" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-      </file>
+      <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
       <file name="constants.js" path="E:\Code\InterviewPrep\video-dashboard\src\utils\constants.js">
-        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="0" coveredmethods="0"/>
+        <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="3" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
         <line num="6" count="18" type="cond" truecount="2" falsecount="0"/>
@@ -92,7 +110,12 @@
         <line num="9" count="15" type="stmt"/>
         <line num="10" count="15" type="stmt"/>
         <line num="16" count="3" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="10" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
       </file>
     </package>
   </project>

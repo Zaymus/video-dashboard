@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Home Page matches snapshot 1`] = `
+exports[`Home Page renders videos from useAPI result 1`] = `
 <div>
   <div
-    class="sc-dTvVRJ jvNhqL"
+    class="sc-jwTyAe dXuAGj"
   >
     <div
       class="sc-ggWZvA QVSmT"
@@ -26,6 +26,98 @@ exports[`Home Page matches snapshot 1`] = `
           />
         </button>
       </div>
+    </div>
+    <p>
+      Video 1
+    </p>
+    <p>
+      Video 2
+    </p>
+    <p>
+      Video 3
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Home Page shows error message when hasError is set 1`] = `
+<div>
+  <div
+    class="sc-jwTyAe dXuAGj"
+  >
+    <div
+      class="sc-ggWZvA QVSmT"
+    >
+      <div
+        class="sc-bRKDuR ecbMmo"
+      >
+        <input
+          class="sc-hvigdm iMebNp"
+          name="search"
+          placeholder="Search"
+          spellcheck="true"
+          type="search"
+        />
+        <button
+          class="sc-fhHczv jvyIXk"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass"
+          />
+        </button>
+      </div>
+    </div>
+    <p>
+      API error
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Home Page shows loader when isLoading is true 1`] = `
+<div>
+  <div
+    class="sc-jwTyAe dXuAGj"
+  >
+    <div
+      class="sc-ggWZvA QVSmT"
+    >
+      <div
+        class="sc-bRKDuR ecbMmo"
+      >
+        <input
+          class="sc-hvigdm iMebNp"
+          name="search"
+          placeholder="Search"
+          spellcheck="true"
+          type="search"
+        />
+        <button
+          class="sc-fhHczv jvyIXk"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="sc-dTvVRJ vdico"
+      role="progressbar"
+    >
+      <svg
+        class="spinner"
+        viewBox="0 0 50 50"
+      >
+        <circle
+          class="path"
+          cx="25"
+          cy="25"
+          fill="none"
+          r="20"
+          stroke-width="5"
+        />
+      </svg>
     </div>
   </div>
 </div>
