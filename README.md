@@ -7,7 +7,8 @@ This project must contain the following features to be defined as complete:
 1. Home Page
     - Displays Trending Videos from the youtube data API
     - Lazy load thumbnails for performance
-2. Video Player PAge
+    - infinite scroll to browse trending videos
+2. Video Player Page
     - Custom video player controls:
         - play/pause, volume, mute
         - seek bar
@@ -17,7 +18,7 @@ This project must contain the following features to be defined as complete:
 3. Search Functionality
     - Debouced search bar (optimizes API calls)
     - search results page with infinite scroll
-4. Responsize UI
+4. Responsive UI
     - works seamlessly on mobile, tablet, desktop
 5. Accessibility
     - Color contrast compliance
