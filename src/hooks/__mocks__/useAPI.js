@@ -25,6 +25,19 @@ export const errorMock = Object.freeze({
   hasError: 'API error'
 });
 
+export const moreVideosMock = Object.freeze({
+  result: {
+    items: [
+      { contentDetails: { id: '4' }, snippet: { title: 'Video 4' } },
+      { contentDetails: { id: '5' }, snippet: { title: 'Video 5' } },
+      { contentDetails: { id: '6' }, snippet: { title: 'Video 6' } }
+    ],
+    nextPageToken: 'DEF456'
+  },
+  isLoading: false,
+  hasError: null
+})
+
 // Default export returns a controlled mock (can override in tests)
 let currentMock = defaultResult;
 

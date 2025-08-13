@@ -5,8 +5,9 @@ jest.mock('../../hooks/useAPI');
 jest.mock('../../utils/env');
 
 import Home from '../Home';
-import { render, screen } from '@testing-library/react';
+import { render, screen, act } from '@testing-library/react';
 import { setUseAPIMock, loadingMock, errorMock, defaultResult } from '../../hooks/useAPI';
+import { moreVideosMock } from '../../hooks/__mocks__/useAPI';
 
 describe('Home Page', () => {
   beforeEach(() => {
@@ -36,6 +37,27 @@ describe('Home Page', () => {
 
     const { container } = render(<Home />);
     expect(screen.getByText('API error')).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+
+   test('renders additional videos from useAPI result when scrollbar is at bottom', () => {
+    Object.defineProperty(window, 'innerHeight', { writable: true, configurable: true, value: 1000 });
+    Object.defineProperty(document.documentElement, 'scrollHeight', { writable: true, configurable: true, value: 3000 });
+    setUseAPIMock(undefined);
+    const { container } = render(<Home />);
+
+    act(() => {
+      setUseAPIMock(moreVideosMock);
+      window.scrollY = 2000;
+      window.dispatchEvent(new Event("scroll"));
+    });
+
+    defaultResult.result.items.forEach(video => {
+      expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
+    });
+    moreVideosMock.result.items.forEach(video => {
+      expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
+    });
     expect(container).toMatchSnapshot();
   });
 });
