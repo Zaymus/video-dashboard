@@ -1,14 +1,9 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import Loader from '../components/common/Loader';
-import useAPI from '../hooks/useAPI';
-import { API_ENDPOINTS, POPULAR_VIDEOS_REQUEST } from '../utils/constants';
-import useScrollBar from '../hooks/useScrollBottom';
-
-const Container = styled.div`
-  margin-top: 75px;
-  padding: 10px 20px;
-`;
+import Loader from '../../components/common/Loader';
+import VideoCard from '../../components/VideoCard';
+import useAPI from '../../hooks/useAPI';
+import { API_ENDPOINTS, POPULAR_VIDEOS_REQUEST } from '../../utils/constants';
+import useScrollBar from '../../hooks/useScrollBottom';
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -39,15 +34,19 @@ const Home = () => {
   }, [isAtBottom, nextPageToken]);
 
   return (
-    <Container id="homeContainer">
+    <>
         {
           videos.length > 0 && videos.map(video => {
-            return <p key={video.contentDetails.id}>{video.snippet.title}</p>;
+            return <VideoCard 
+              id={video.id}
+              title={video.snippet.title}
+              thumbnailURL={video.snippet.thumbnails.standard.url}
+            />;
           })
         }
         { isLoading == true && <Loader /> }
         { hasError && <p>{ hasError }</p>}
-    </Container>
+    </>
   );
 }
 

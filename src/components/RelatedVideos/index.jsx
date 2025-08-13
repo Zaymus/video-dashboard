@@ -1,6 +1,5 @@
 import { lazy } from 'react';
-import Loader from '../common/Loader';
 
-const RelatedVideos = () => lazy(() => import('./RelatedVideos'), {fallback: <Loader />});
+const RelatedVideos = lazy(() => import('./RelatedVideos'));
 
 export default RelatedVideos;
