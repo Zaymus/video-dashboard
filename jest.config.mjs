@@ -16,10 +16,10 @@ const config = {
   coverageDirectory: "coverage",
   coverageThreshold: {
     global: {
-      branches: 80,
-      functions: 90,
-      lines: 85,
-      statements: 85
+      branches: 90,
+      functions: 95,
+      lines: 95,
+      statements: 95
     }
   },
   transform: {

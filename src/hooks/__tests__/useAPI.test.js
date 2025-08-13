@@ -58,7 +58,16 @@ describe('useAPI', () => {
     await waitFor(() => {
       expect(result.current.hasError).toEqual("HTTP Error: Status: 400");
     });
-  })
+  });
+
+  test('returns default error message when applicable', async () => {
+    axios.mockRejectedValue(new Error());
+    const { result } = renderHook(() => useAPI('/api/youtube/v3/videos'));
+
+    await waitFor(() => {
+      expect(result.current.hasError).toEqual("Something went wrong when calling API");
+    });
+  });
 
   test('destroys properly on unmount', async () => {
     axios.mockResolvedValue({status: 200, data: 'success'});
