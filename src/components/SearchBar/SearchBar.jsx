@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import styled from "styled-components";
+import { SROnly } from '../common';
 
 const SearchContainer = styled.div`
   width: 35%;
@@ -69,6 +70,7 @@ const SearchBar = () => {
         spellCheck
       />
       <SearchButton>
+        <SROnly>Search</SROnly>
         <i className="fa-solid fa-magnifying-glass"></i>
       </SearchButton>
     </SearchContainer>

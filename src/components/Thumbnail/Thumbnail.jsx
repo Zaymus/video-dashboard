@@ -18,7 +18,7 @@ const Thumbnail = ({ thumbnails }) => {
   }, [thumbnails]);
 
 
-  return <Image src={url}></Image>
+  return <Image src={url} alt="Thumbnail image"></Image>
 };
 
 export default Thumbnail;
