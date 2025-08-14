@@ -5,7 +5,7 @@ jest.mock('../../hooks/useAPI');
 jest.mock('../../utils/env');
 
 import Home from '../Home';
-import { render, screen, act } from '@testing-library/react';
+import { render, screen, act, waitFor } from '@testing-library/react';
 import { setUseAPIMock, loadingMock, errorMock, defaultResult } from '../../hooks/useAPI';
 import { moreVideosMock } from '../../hooks/__mocks__/useAPI';
 
@@ -14,12 +14,14 @@ describe('Home Page', () => {
     jest.resetAllMocks();
   })
 
-  test('renders videos from useAPI result', () => {
+  test('renders videos from useAPI result', async () => {
     setUseAPIMock(undefined);
     const { container } = render(<Home />);
 
-    defaultResult.result.items.forEach(video => {
-      expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
+    await waitFor(() => {
+      defaultResult.result.items.forEach(video => {
+        expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
+      });
     });
     expect(container).toMatchSnapshot();
   });
@@ -40,23 +42,28 @@ describe('Home Page', () => {
     expect(container).toMatchSnapshot();
   });
 
-   test('renders additional videos from useAPI result when scrollbar is at bottom', () => {
+   test('renders additional videos from useAPI result when scrollbar is at bottom', async () => {
     Object.defineProperty(window, 'innerHeight', { writable: true, configurable: true, value: 1000 });
     Object.defineProperty(document.documentElement, 'scrollHeight', { writable: true, configurable: true, value: 3000 });
     setUseAPIMock(undefined);
     const { container } = render(<Home />);
 
+    await waitFor(() => {
+      defaultResult.result.items.forEach(video => {
+        expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
+      });
+    });
+    
     act(() => {
       setUseAPIMock(moreVideosMock);
       window.scrollY = 2000;
       window.dispatchEvent(new Event("scroll"));
     });
 
-    defaultResult.result.items.forEach(video => {
-      expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
-    });
-    moreVideosMock.result.items.forEach(video => {
-      expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
+    await waitFor(() => {
+      moreVideosMock.result.items.forEach(video => {
+        expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
+      });
     });
     expect(container).toMatchSnapshot();
   });
