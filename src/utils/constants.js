@@ -37,7 +37,7 @@ export const POPULAR_VIDEOS_REQUEST = {
     part: "snippet,contentDetails,statistics",
     chart: "mostPopular",
     regionCode: "US",
-    maxResults: "10",
+    maxResults: "20",
     key: `${env.YOUTUBE_DATA_API_KEY}`
   },
   ...REQUEST_HEADERS

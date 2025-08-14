@@ -14,6 +14,10 @@
   --text-primary-light: #1A1A1A;
   --text-secondary-light: #4F4F4F;
   --border-light: #E0E0E0;
+
+  --videos-gutter-margin: 30px;
+  --videos-per-row: 5;
+  --videos-usable-width: calc(100% - var(--videos-gutter-margin) * 2);
 }
 
 body {
