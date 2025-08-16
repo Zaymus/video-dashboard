@@ -15,6 +15,7 @@ export { env };
 
 export const API_ENDPOINTS = {
   getVideos: '/api/youtube/v3/videos',
+  searchVideos: '/api/youtube/v3/search'
 }
 
 export const isURLValid = (url) => {
@@ -30,15 +31,37 @@ const REQUEST_HEADERS = {
     'Access-control-allow-origin': '*',
     'Access-control-allow-credentials': true
   }
-}
+};
 
 export const POPULAR_VIDEOS_REQUEST = {
   params: {
-    part: "snippet,contentDetails,statistics",
+    part: "snippet",
     chart: "mostPopular",
     regionCode: "US",
     maxResults: "20",
     key: `${env.YOUTUBE_DATA_API_KEY}`
   },
   ...REQUEST_HEADERS
+};
+
+export const VIDEO_BY_ID_REQUEST = {
+  params: {
+    part: "snippet",
+    type: "video",
+    key: `${env.YOUTUBE_DATA_API_KEY}`
+  },
+  ...REQUEST_HEADERS
 }
+
+export const SEARCH_RELATED_VIDEOS_REQUEST = {
+  params: {
+    part: "id,snippet",
+    type: "video",
+    maxResults: "10",
+    key: `${env.YOUTUBE_DATA_API_KEY}`
+  },
+  ...REQUEST_HEADERS
+};
+
+export const VIDEO_PLAYER_WIDTH_PERCENT = 2/3;
+export const VIDEO_PLAYER_HEIGHT_RATIO = 9/16;

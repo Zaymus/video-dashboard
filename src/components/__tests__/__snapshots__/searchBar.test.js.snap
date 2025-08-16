@@ -3,18 +3,23 @@
 exports[`SearchBar component testing handlers work as intended with no ref 1`] = `
 <div>
   <div
-    class="sc-bRKDuR ecbMmo"
+    class="sc-ggWZvA ZMjlW"
   >
     <input
-      class="sc-hvigdm iMebNp"
+      class="sc-dTvVRJ FRDnM"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-fhHczv jvyIXk"
+      class="sc-jwTyAe eKrelh"
     >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        Search
+      </span>
       <i
         class="fa-solid fa-magnifying-glass"
       />
@@ -26,18 +31,23 @@ exports[`SearchBar component testing handlers work as intended with no ref 1`] =
 exports[`SearchBar component testing handlers work as intended with no ref 2`] = `
 <div>
   <div
-    class="sc-bRKDuR ecbMmo"
+    class="sc-ggWZvA ZMjlW"
   >
     <input
-      class="sc-hvigdm iMebNp"
+      class="sc-dTvVRJ FRDnM"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-fhHczv jvyIXk"
+      class="sc-jwTyAe eKrelh"
     >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        Search
+      </span>
       <i
         class="fa-solid fa-magnifying-glass"
       />
@@ -49,19 +59,24 @@ exports[`SearchBar component testing handlers work as intended with no ref 2`] =
 exports[`SearchBar component testing matches snapshot - blur 1`] = `
 <div>
   <div
-    class="sc-bRKDuR ecbMmo"
+    class="sc-ggWZvA ZMjlW"
     style="transition: box-shadow 0.15s linear;"
   >
     <input
-      class="sc-hvigdm iMebNp"
+      class="sc-dTvVRJ FRDnM"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-fhHczv jvyIXk"
+      class="sc-jwTyAe eKrelh"
     >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        Search
+      </span>
       <i
         class="fa-solid fa-magnifying-glass"
       />
@@ -73,18 +88,23 @@ exports[`SearchBar component testing matches snapshot - blur 1`] = `
 exports[`SearchBar component testing matches snapshot - button blur 1`] = `
 <div>
   <div
-    class="sc-bRKDuR ecbMmo"
+    class="sc-ggWZvA ZMjlW"
   >
     <input
-      class="sc-hvigdm iMebNp"
+      class="sc-dTvVRJ FRDnM"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-fhHczv jvyIXk"
+      class="sc-jwTyAe eKrelh"
     >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        Search
+      </span>
       <i
         class="fa-solid fa-magnifying-glass"
       />
@@ -96,18 +116,23 @@ exports[`SearchBar component testing matches snapshot - button blur 1`] = `
 exports[`SearchBar component testing matches snapshot - button hover 1`] = `
 <div>
   <div
-    class="sc-bRKDuR ecbMmo"
+    class="sc-ggWZvA ZMjlW"
   >
     <input
-      class="sc-hvigdm iMebNp"
+      class="sc-dTvVRJ FRDnM"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-fhHczv jvyIXk"
+      class="sc-jwTyAe eKrelh"
     >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        Search
+      </span>
       <i
         class="fa-solid fa-magnifying-glass"
       />
@@ -119,19 +144,24 @@ exports[`SearchBar component testing matches snapshot - button hover 1`] = `
 exports[`SearchBar component testing matches snapshot - focus 1`] = `
 <div>
   <div
-    class="sc-bRKDuR ecbMmo"
+    class="sc-ggWZvA ZMjlW"
     style="transition: box-shadow 0.15s linear; box-shadow: 0px 0px 10px var(--primary);"
   >
     <input
-      class="sc-hvigdm iMebNp"
+      class="sc-dTvVRJ FRDnM"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-fhHczv jvyIXk"
+      class="sc-jwTyAe eKrelh"
     >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        Search
+      </span>
       <i
         class="fa-solid fa-magnifying-glass"
       />
@@ -143,18 +173,23 @@ exports[`SearchBar component testing matches snapshot - focus 1`] = `
 exports[`SearchBar component testing matches snapshot 1`] = `
 <div>
   <div
-    class="sc-bRKDuR ecbMmo"
+    class="sc-ggWZvA ZMjlW"
   >
     <input
-      class="sc-hvigdm iMebNp"
+      class="sc-dTvVRJ FRDnM"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-fhHczv jvyIXk"
+      class="sc-jwTyAe eKrelh"
     >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        Search
+      </span>
       <i
         class="fa-solid fa-magnifying-glass"
       />

@@ -6,79 +6,79 @@ exports[`Home Page renders additional videos from useAPI result when scrollbar i
     class="sc-ggWZvA bWVpDv"
   >
     <div
-      class="sc-dTvVRJ czkYqS"
+      class="sc-dFVmKS oZxKB"
     >
       <img
         alt="Thumbnail image"
         class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 1
       </p>
     </div>
     <div
-      class="sc-dTvVRJ czkYqS"
+      class="sc-kCuUfV jYcHYQ"
     >
       <img
         alt="Thumbnail image"
         class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 2
       </p>
     </div>
     <div
-      class="sc-dTvVRJ czkYqS"
+      class="sc-dNdcvo kvsJrk"
     >
       <img
         alt="Thumbnail image"
         class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 3
       </p>
     </div>
     <div
-      class="sc-dTvVRJ czkYqS"
+      class="sc-fbQrwq kjbnsJ"
     >
       <img
         alt="Thumbnail image"
         class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 4
       </p>
     </div>
     <div
-      class="sc-dTvVRJ czkYqS"
+      class="sc-gGKoUb eyEExD"
     >
       <img
         alt="Thumbnail image"
         class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 5
       </p>
     </div>
     <div
-      class="sc-dTvVRJ czkYqS"
+      class="sc-hwddKA hhxvwh"
     >
       <img
         alt="Thumbnail image"
         class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 6
       </p>
@@ -94,40 +94,40 @@ exports[`Home Page renders videos from useAPI result 1`] = `
     style=""
   >
     <div
-      class="sc-dTvVRJ czkYqS"
+      class="sc-jJLAfE djTEPG"
     >
       <img
         alt="Thumbnail image"
         class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 1
       </p>
     </div>
     <div
-      class="sc-dTvVRJ czkYqS"
+      class="sc-hwkwBN jxUKGv"
     >
       <img
         alt="Thumbnail image"
         class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 2
       </p>
     </div>
     <div
-      class="sc-dTvVRJ czkYqS"
+      class="sc-kNOymR iFLlLI"
     >
       <img
         alt="Thumbnail image"
         class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 3
       </p>

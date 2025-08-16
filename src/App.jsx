@@ -8,9 +8,9 @@ import SearchResults from './pages/SearchResults';
 import styled from "styled-components";
 
 const AppContainer = styled.div`
-  margin-top: 75px;
+  margin-top: var(--header-height);
   padding-top: 10px;
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - var(--heeader-height));
 `;
 
 
@@ -23,7 +23,7 @@ const App = () => {
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path="/Video/:videoID" element={<Video />}/>
+                <Route path="/Video/:videoId" element={<Video />}/>
                 <Route path="/Search" element={<SearchResults />}/>
               </Routes>
             </BrowserRouter>
