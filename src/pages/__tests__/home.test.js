@@ -3,14 +3,23 @@ import '@testing-library/jest-dom';
 
 jest.mock('../../hooks/useAPI');
 jest.mock('../../utils/env');
+jest.mock('react-router', () => ({
+  ...jest.requireActual('react-router'),
+  useNavigate: () => jest.fn(),
+}));
 
 import Home from '../Home';
 import { render, screen, act, waitFor } from '@testing-library/react';
-import { setUseAPIMock, loadingMock, errorMock, defaultResult } from '../../hooks/useAPI';
-import { moreVideosMock } from '../../hooks/__mocks__/useAPI';
+import { setUseAPIMock, loadingMock, errorMock, defaultResult, moreVideosMock } from '../../hooks/useAPI';
+
+let scrollY;
+Object.defineProperty(window, 'innerHeight', { writable: true, configurable: true, value: 1000 });
+Object.defineProperty(document.documentElement, 'scrollHeight', { writable: true, configurable: true, value: 3000 });
+Object.defineProperty(window, 'scrollY', { configurable: true, get: () => scrollY});
 
 describe('Home Page', () => {
   beforeEach(() => {
+    scrollY = 0;
     jest.resetAllMocks();
   })
 
@@ -43,8 +52,6 @@ describe('Home Page', () => {
   });
 
    test('renders additional videos from useAPI result when scrollbar is at bottom', async () => {
-    Object.defineProperty(window, 'innerHeight', { writable: true, configurable: true, value: 1000 });
-    Object.defineProperty(document.documentElement, 'scrollHeight', { writable: true, configurable: true, value: 3000 });
     setUseAPIMock(undefined);
     const { container } = render(<Home />);
 
@@ -56,7 +63,7 @@ describe('Home Page', () => {
     
     act(() => {
       setUseAPIMock(moreVideosMock);
-      window.scrollY = 2000;
+      scrollY = 2000;
       window.dispatchEvent(new Event("scroll"));
     });
 

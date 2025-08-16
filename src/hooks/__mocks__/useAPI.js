@@ -36,7 +36,7 @@ export const moreVideosMock = Object.freeze({
   },
   isLoading: false,
   hasError: null
-})
+});
 
 // Default export returns a controlled mock (can override in tests)
 let currentMock = defaultResult;

@@ -23,4 +23,20 @@ describe('useDebounce', () => {
     });
     expect(result.current).toEqual('test');
   });
+
+  test('should call function after delay', () => {
+    const cb = jest.fn();
+    const { result } = renderHook(() => useDebounce(cb, 500));
+    act(() => {
+      result.current();
+    });
+    
+    expect(cb).not.toHaveBeenCalled();
+
+    act(() => {
+      jest.advanceTimersByTime(500);
+    });
+
+    expect(cb).toHaveBeenCalled();
+  });
 });

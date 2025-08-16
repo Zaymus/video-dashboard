@@ -1,11 +1,11 @@
-import { useEffect, useState, Suspense } from 'react';
+import { useEffect, useState, Suspense, useCallback } from 'react';
 import Loader from '../../components/common/Loader';
 import VideoCard from '../../components/VideoCard';
 import useAPI from '../../hooks/useAPI';
 import { API_ENDPOINTS, POPULAR_VIDEOS_REQUEST } from '../../utils/constants';
-import useScrollBar from '../../hooks/useScrollBottom';
 import styled from 'styled-components';
 import { Fullscreen } from '../../components/common';
+import useInfiniteScroll from '../../hooks/useInfiniteScroll';
 
 const VideosContainer = styled.div`
   display: flex;
@@ -18,28 +18,35 @@ const Home = () => {
   const [nextPageToken, setNextPageToken] = useState(null);
   const [requestConfig, setRequestConfig] = useState(POPULAR_VIDEOS_REQUEST);
   const { result, isLoading, hasError } = useAPI(API_ENDPOINTS.getVideos, requestConfig);
-  const isAtBottom = useScrollBar();
 
   useEffect(() => {
     if (result && result.nextPageToken !== nextPageToken) {
       setNextPageToken(result.nextPageToken);
-      setVideos(prevVideos => {
-        return prevVideos?.length > 0 ? [...prevVideos, ...result.items] : [...result.items];
-      });
+      setVideos(prev => [...prev, ...result.items]);
     }
   }, [result])
 
-  useEffect(() => {
-    if (isAtBottom) {
-      setRequestConfig(prevConfig => ({
-        ...prevConfig,
-        params: {
-          ...prevConfig.params,
-          pageToken: nextPageToken
-        }
-      }))
+  const loadNextPage = useCallback(() => {
+    if(!isLoading && nextPageToken) {
+      setRequestConfig(prevConfig => {
+        if (prevConfig.params?.pageToken === nextPageToken) return prevConfig;
+
+        return {
+          ...prevConfig,
+          params: {
+            ...prevConfig.params,
+            pageToken: nextPageToken
+          }
+        };
+      });
     }
-  }, [isAtBottom, nextPageToken]);
+  }, [isLoading, nextPageToken]);
+
+  useInfiniteScroll({
+    callback: loadNextPage,
+    delay: 300,
+    isLoading
+  });
 
   return (
     <Suspense fallback={<Fullscreen className="fitHeader"><Loader /></Fullscreen>}>

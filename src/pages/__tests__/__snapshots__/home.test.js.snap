@@ -3,76 +3,82 @@
 exports[`Home Page renders additional videos from useAPI result when scrollbar is at bottom 1`] = `
 <div>
   <div
-    class="sc-fhHczv cxAPwY"
+    class="sc-ggWZvA bWVpDv"
   >
     <div
-      class="sc-ggWZvA iRyNOU"
+      class="sc-dTvVRJ czkYqS"
     >
       <img
-        class="sc-jwTyAe itamvn"
+        alt="Thumbnail image"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 1
       </p>
     </div>
     <div
-      class="sc-ggWZvA iRyNOU"
+      class="sc-dTvVRJ czkYqS"
     >
       <img
-        class="sc-jwTyAe itamvn"
+        alt="Thumbnail image"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 2
       </p>
     </div>
     <div
-      class="sc-ggWZvA iRyNOU"
+      class="sc-dTvVRJ czkYqS"
     >
       <img
-        class="sc-jwTyAe itamvn"
+        alt="Thumbnail image"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 3
       </p>
     </div>
     <div
-      class="sc-ggWZvA iRyNOU"
+      class="sc-dTvVRJ czkYqS"
     >
       <img
-        class="sc-jwTyAe itamvn"
+        alt="Thumbnail image"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 4
       </p>
     </div>
     <div
-      class="sc-ggWZvA iRyNOU"
+      class="sc-dTvVRJ czkYqS"
     >
       <img
-        class="sc-jwTyAe itamvn"
+        alt="Thumbnail image"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 5
       </p>
     </div>
     <div
-      class="sc-ggWZvA iRyNOU"
+      class="sc-dTvVRJ czkYqS"
     >
       <img
-        class="sc-jwTyAe itamvn"
+        alt="Thumbnail image"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 6
       </p>
@@ -84,41 +90,44 @@ exports[`Home Page renders additional videos from useAPI result when scrollbar i
 exports[`Home Page renders videos from useAPI result 1`] = `
 <div>
   <div
-    class="sc-fhHczv cxAPwY"
+    class="sc-ggWZvA bWVpDv"
     style=""
   >
     <div
-      class="sc-ggWZvA iRyNOU"
+      class="sc-dTvVRJ czkYqS"
     >
       <img
-        class="sc-jwTyAe itamvn"
+        alt="Thumbnail image"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 1
       </p>
     </div>
     <div
-      class="sc-ggWZvA iRyNOU"
+      class="sc-dTvVRJ czkYqS"
     >
       <img
-        class="sc-jwTyAe itamvn"
+        alt="Thumbnail image"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 2
       </p>
     </div>
     <div
-      class="sc-ggWZvA iRyNOU"
+      class="sc-dTvVRJ czkYqS"
     >
       <img
-        class="sc-jwTyAe itamvn"
+        alt="Thumbnail image"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 3
       </p>
@@ -130,7 +139,7 @@ exports[`Home Page renders videos from useAPI result 1`] = `
 exports[`Home Page shows error message when hasError is set 1`] = `
 <div>
   <div
-    class="sc-fhHczv cxAPwY"
+    class="sc-ggWZvA bWVpDv"
   >
     <p>
       API error
@@ -142,7 +151,7 @@ exports[`Home Page shows error message when hasError is set 1`] = `
 exports[`Home Page shows loader when isLoading is true 1`] = `
 <div>
   <div
-    class="sc-fhHczv cxAPwY"
+    class="sc-ggWZvA bWVpDv"
   >
     <div
       class="sc-bRKDuR fMrgJQ"

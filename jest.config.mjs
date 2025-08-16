@@ -12,6 +12,7 @@ const config = {
       "<rootDir>/tests/unit/__mocks__/fileMock.js",
     "^@/(.*)$": "<rootDir>/src/$1"
   },
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
   collectCoverage: true,
   coverageDirectory: "coverage",
   coverageThreshold: {
