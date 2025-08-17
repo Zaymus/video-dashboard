@@ -18,7 +18,6 @@
   --header-height: 75px;
 
   --videos-gutter-margin: 30px;
-  --videos-per-row: 5;
   --videos-usable-width: calc(100% - var(--videos-gutter-margin) * 2);
 }
 

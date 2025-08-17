@@ -6,6 +6,7 @@ import { API_ENDPOINTS, POPULAR_VIDEOS_REQUEST } from '../../utils/constants';
 import styled from 'styled-components';
 import { Fullscreen } from '../../components/common';
 import useInfiniteScroll from '../../hooks/useInfiniteScroll';
+import useScreenSize from '../../hooks/useScreenSize';
 
 const VideosContainer = styled.div`
   display: flex;
@@ -18,6 +19,7 @@ const Home = () => {
   const [nextPageToken, setNextPageToken] = useState(null);
   const [requestConfig, setRequestConfig] = useState(POPULAR_VIDEOS_REQUEST);
   const { result, isLoading, hasError } = useAPI(API_ENDPOINTS.getVideos, requestConfig);
+  const screenSize = useScreenSize();
 
   useEffect(() => {
     if (result && result.nextPageToken !== nextPageToken) {
@@ -57,6 +59,7 @@ const Home = () => {
               id={video.id}
               title={video.snippet.title}
               thumbnails={video.snippet.thumbnails}
+              cardsPerRow={screenSize === 'mobile' ? 1 : screenSize === 'tablet' ? 3 : 5}
             />;
           })
         }

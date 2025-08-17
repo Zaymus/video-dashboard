@@ -65,3 +65,9 @@ export const SEARCH_RELATED_VIDEOS_REQUEST = {
 
 export const VIDEO_PLAYER_WIDTH_PERCENT = 2/3;
 export const VIDEO_PLAYER_HEIGHT_RATIO = 9/16;
+
+export const SCREEN_SIZES = {
+  MOBILE: 'mobile',
+  TABLET: 'tablet',
+  DESKTOP: 'desktop'
+}
