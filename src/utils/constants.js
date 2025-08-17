@@ -67,7 +67,8 @@ export const VIDEO_PLAYER_WIDTH_PERCENT = 2/3;
 export const VIDEO_PLAYER_HEIGHT_RATIO = 9/16;
 
 export const SCREEN_SIZES = {
-  MOBILE: 'mobile',
+  MOBILE_SMALL: 'mobile-small',
+  MOBILE_LARGE: 'mobile-large',
   TABLET: 'tablet',
   DESKTOP: 'desktop'
 }

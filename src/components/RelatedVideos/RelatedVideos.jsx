@@ -1,34 +1,35 @@
 import styled from "styled-components";
 import VideoList from "../VideoList/VideoList";
+import { useParams } from 'react-router'
 import { Loader } from "../common";
 import useAPI from "../../hooks/useAPI";
 import { API_ENDPOINTS, SEARCH_RELATED_VIDEOS_REQUEST, VIDEO_BY_ID_REQUEST } from "../../utils/constants";
-import { useEffect, useState, useMemo, useCallback } from "react";
-import useInfiniteScroll from "../../hooks/useInfiniteScroll";
+import { useEffect, useState, useMemo } from "react";
+import useScreenSize from "../../hooks/useScreenSize";
 
 const RelatedContainer = styled.div`
-  grid-column: 4;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  overflow-x: hidden;
-  height: 100%;
+    grid-column: ${props => props.isDesktop ? '2' : '1' };
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--header-height) - 10px);
 
-  h2 {
-    margin: 0;
-    text-align: center;
+    h2 {
+      margin: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    hr {
     width: 100%;
-  }
+    }
+  `;
 
-  hr {
-  width: 100%;
-  }
-`;
+const RelatedVideos = () => {
+  const { screenSize, SCREEN_SIZES } = useScreenSize();
 
-const RelatedVideos = ({ videoId }) => {
   const [ relatedVideos, setRelatedVideos ] = useState([]);
-  const [ nextPageToken, setNextPageToken ] = useState(null);
   const [ searchQuery, setSearchQuery ] = useState([]);
+  const { videoId } = useParams();
 
   const config = useMemo(() => ({
     ...VIDEO_BY_ID_REQUEST,
@@ -59,41 +60,16 @@ const RelatedVideos = ({ videoId }) => {
   const { result: relatedVideosResult, isLoading: relatedVideosLoading } = useAPI(API_ENDPOINTS.searchVideos, searchRequest);
 
   useEffect(() => {
-    if (relatedVideosResult?.nextPageToken !== nextPageToken) {
-      if (relatedVideosResult?.items.length > 0) {
-        setRelatedVideos(relatedVideosResult.items);
-        setNextPageToken(relatedVideosResult.nextPageToken);
-      }
+    if (relatedVideosResult?.items.length > 0) {
+      setRelatedVideos(relatedVideosResult.items);
     }
   }, [relatedVideosResult]);
-
-  const loadNextPage = useCallback(() => {
-    if(!relatedVideosLoading && nextPageToken) {
-      setSearchQuery(prevConfig => {
-        if (prevConfig.params?.pageToken === nextPageToken) return prevConfig;
-
-        return {
-          ...prevConfig,
-          params: {
-            ...prevConfig.params,
-            pageToken: nextPageToken
-          }
-        };
-      });
-    }
-  }, [relatedVideosLoading, nextPageToken]);
-
-  useInfiniteScroll({
-    callback: loadNextPage,
-    delay: 300,
-    isLoading: relatedVideosLoading
-  });
   
   return (
     <>
       {videoDetailsLoading && <Loader /> }
       {!videoDetailsLoading && 
-        <RelatedContainer>
+        <RelatedContainer isDesktop={screenSize === SCREEN_SIZES.DESKTOP}>
           <h2>Related Videos</h2>
           <hr />
           {relatedVideosLoading && <Loader />}
@@ -101,7 +77,6 @@ const RelatedVideos = ({ videoId }) => {
         </RelatedContainer>
       }
     </>
-    
   )
 }
 

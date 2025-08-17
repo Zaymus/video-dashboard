@@ -10,16 +10,18 @@ jest.mock('react-router', () => ({
 
 import Home from '../Home';
 import { render, screen, act, waitFor } from '@testing-library/react';
-import { setUseAPIMock, loadingMock, errorMock, defaultResult, moreVideosMock } from '../../hooks/useAPI';
+import { setUseAPIMock, loadingMock, errorMock, defaultResult, moreVideosMock, responsiveMock } from '../../hooks/useAPI';
 
 let scrollY;
 Object.defineProperty(window, 'innerHeight', { writable: true, configurable: true, value: 1000 });
+Object.defineProperty(window, 'innerWidth', { writable: true, configurable: true, value: 1920 });
 Object.defineProperty(document.documentElement, 'scrollHeight', { writable: true, configurable: true, value: 3000 });
 Object.defineProperty(window, 'scrollY', { configurable: true, get: () => scrollY});
 
 describe('Home Page', () => {
   beforeEach(() => {
     scrollY = 0;
+    window.innerWidth = 1920;
     jest.resetAllMocks();
   })
 
@@ -69,6 +71,45 @@ describe('Home Page', () => {
 
     await waitFor(() => {
       moreVideosMock.result.items.forEach(video => {
+        expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
+      });
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Matches snapshot in small mobile view', async () => {
+    setUseAPIMock(responsiveMock);
+    window.innerWidth = 375;
+    const { container } = render(<Home />);
+
+    await waitFor(() => {
+      responsiveMock.result.items.forEach(video => {
+        expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
+      });
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Matches snapshot in large mobile view', async () => {
+    setUseAPIMock(responsiveMock);
+    window.innerWidth = 425;
+    const { container } = render(<Home />);
+
+    await waitFor(() => {
+      responsiveMock.result.items.forEach(video => {
+        expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
+      });
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  test('Matches snapshot in tablet view', async () => {
+    setUseAPIMock(responsiveMock);
+    window.innerWidth = 768;
+    const { container } = render(<Home />);
+
+    await waitFor(() => {
+      responsiveMock.result.items.forEach(video => {
         expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
       });
     });

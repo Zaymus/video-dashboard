@@ -2,7 +2,7 @@ import styled from "styled-components";
 import SearchBar from "../SearchBar/SearchBar";
 
 const HeaderContainer = styled.div`
-  width: 100%;
+  width: 100vw;
   height: var(--header-height);
   background: var(--background-dark);
   display: flex;

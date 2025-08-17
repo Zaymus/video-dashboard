@@ -1,84 +1,345 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Home Page renders additional videos from useAPI result when scrollbar is at bottom 1`] = `
+exports[`Home Page Matches snapshot in large mobile view 1`] = `
 <div>
   <div
-    class="sc-ggWZvA bWVpDv"
+    class="sc-fszimp dfnBGm"
   >
     <div
-      class="sc-dFVmKS oZxKB"
+      class="sc-etsjJW ggnOgq"
     >
       <img
         alt="Thumbnail image"
-        class="sc-hjsuWn dvtMdC"
+        class="sc-jJLAfE ldElst"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 1
       </p>
     </div>
     <div
-      class="sc-kCuUfV jYcHYQ"
+      class="sc-fYmhhH qRnIp"
     >
       <img
         alt="Thumbnail image"
-        class="sc-hjsuWn dvtMdC"
+        class="sc-jJLAfE ldElst"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 2
       </p>
     </div>
     <div
-      class="sc-dNdcvo kvsJrk"
+      class="sc-koBvLg gepkNA"
     >
       <img
         alt="Thumbnail image"
-        class="sc-hjsuWn dvtMdC"
+        class="sc-jJLAfE ldElst"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 3
       </p>
     </div>
     <div
-      class="sc-fbQrwq kjbnsJ"
+      class="sc-DZJJV fOycTX"
     >
       <img
         alt="Thumbnail image"
-        class="sc-hjsuWn dvtMdC"
+        class="sc-jJLAfE ldElst"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 4
       </p>
     </div>
     <div
-      class="sc-gGKoUb eyEExD"
+      class="sc-kUouGy fgSTVR"
     >
       <img
         alt="Thumbnail image"
-        class="sc-hjsuWn dvtMdC"
+        class="sc-jJLAfE ldElst"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
         Video 5
       </p>
     </div>
     <div
-      class="sc-hwddKA hhxvwh"
+      class="sc-bjMIFn htVkrL"
     >
       <img
         alt="Thumbnail image"
-        class="sc-hjsuWn dvtMdC"
+        class="sc-jJLAfE ldElst"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 6
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Page Matches snapshot in small mobile view 1`] = `
+<div>
+  <div
+    class="sc-bbbBoY fSnIyn"
+  >
+    <div
+      class="sc-cdmAjP hPWYRt"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 1
+      </p>
+    </div>
+    <div
+      class="sc-jytpVa irsVAg"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 2
+      </p>
+    </div>
+    <div
+      class="sc-eknHtZ haGIq"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 3
+      </p>
+    </div>
+    <div
+      class="sc-pYNGo ijhkAP"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 4
+      </p>
+    </div>
+    <div
+      class="sc-cCVJLD jsHJLw"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 5
+      </p>
+    </div>
+    <div
+      class="sc-jYczwO fBkcLO"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 6
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Page Matches snapshot in tablet view 1`] = `
+<div>
+  <div
+    class="sc-fhfEft fYTZru"
+  >
+    <div
+      class="sc-bAehkN hyedll"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 1
+      </p>
+    </div>
+    <div
+      class="sc-gahYZc dUSyxg"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 2
+      </p>
+    </div>
+    <div
+      class="sc-bSFBcf gqKCcK"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 3
+      </p>
+    </div>
+    <div
+      class="sc-gsJsQu gMNIXH"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 4
+      </p>
+    </div>
+    <div
+      class="sc-ibashp SakQv"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 5
+      </p>
+    </div>
+    <div
+      class="sc-blIAwI kILnW"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 6
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home Page renders additional videos from useAPI result when scrollbar is at bottom 1`] = `
+<div>
+  <div
+    class="sc-fVHBlr iiYxoB"
+  >
+    <div
+      class="sc-gLaqbQ gImMEA"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 1
+      </p>
+    </div>
+    <div
+      class="sc-ipUnzB gXfDzC"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 2
+      </p>
+    </div>
+    <div
+      class="sc-eQwNpu cSvTBg"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 3
+      </p>
+    </div>
+    <div
+      class="sc-gvqKNf fPguDv"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 4
+      </p>
+    </div>
+    <div
+      class="sc-cOpnSz cnEVnn"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 5
+      </p>
+    </div>
+    <div
+      class="sc-kjwdDK ZIZIp"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
       >
         Video 6
       </p>
@@ -90,33 +351,19 @@ exports[`Home Page renders additional videos from useAPI result when scrollbar i
 exports[`Home Page renders videos from useAPI result 1`] = `
 <div>
   <div
-    class="sc-ggWZvA bWVpDv"
-    style=""
+    class="sc-dTvVRJ dSSsTl"
   >
-    <div
-      class="sc-jJLAfE djTEPG"
-    >
-      <img
-        alt="Thumbnail image"
-        class="sc-hjsuWn dvtMdC"
-      />
-      <p
-        class="sc-dTvVRJ dmYGZj"
-      >
-        Video 1
-      </p>
-    </div>
     <div
       class="sc-hwkwBN jxUKGv"
     >
       <img
         alt="Thumbnail image"
-        class="sc-hjsuWn dvtMdC"
+        class="sc-jJLAfE ldElst"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
       >
-        Video 2
+        Video 1
       </p>
     </div>
     <div
@@ -124,10 +371,23 @@ exports[`Home Page renders videos from useAPI result 1`] = `
     >
       <img
         alt="Thumbnail image"
-        class="sc-hjsuWn dvtMdC"
+        class="sc-jJLAfE ldElst"
       />
       <p
-        class="sc-dTvVRJ dmYGZj"
+        class="sc-jwTyAe eTofHv"
+      >
+        Video 2
+      </p>
+    </div>
+    <div
+      class="sc-dYwGCk ctcOWF"
+    >
+      <img
+        alt="Thumbnail image"
+        class="sc-jJLAfE ldElst"
+      />
+      <p
+        class="sc-jwTyAe eTofHv"
       >
         Video 3
       </p>
@@ -139,7 +399,7 @@ exports[`Home Page renders videos from useAPI result 1`] = `
 exports[`Home Page shows error message when hasError is set 1`] = `
 <div>
   <div
-    class="sc-ggWZvA bWVpDv"
+    class="sc-dntSTA eWlVgx"
   >
     <p>
       API error
@@ -151,7 +411,7 @@ exports[`Home Page shows error message when hasError is set 1`] = `
 exports[`Home Page shows loader when isLoading is true 1`] = `
 <div>
   <div
-    class="sc-ggWZvA bWVpDv"
+    class="sc-eqYatC ezGcFW"
   >
     <div
       class="sc-bRKDuR fMrgJQ"

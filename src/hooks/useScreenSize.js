@@ -7,9 +7,11 @@ const useScreenSize = () => {
   const resizeHandler = () => {
     const width = window.innerWidth;
 
-    if (width < 768) {
-      setScreenSize(SCREEN_SIZES.MOBILE);
-    } else if (width >= 768 && width < 1024) {
+    if (width <= 375) {
+      setScreenSize(SCREEN_SIZES.MOBILE_SMALL);
+    } else if (width <= 425) {
+      setScreenSize(SCREEN_SIZES.MOBILE_LARGE);
+    } else if (width <= 768) {
       setScreenSize(SCREEN_SIZES.TABLET);
     } else {
       setScreenSize(SCREEN_SIZES.DESKTOP);
@@ -27,7 +29,7 @@ const useScreenSize = () => {
     }
   }, []);
 
-  return screenSize;
+  return { screenSize, SCREEN_SIZES };
 };
 
 export default useScreenSize;

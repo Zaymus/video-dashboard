@@ -10,9 +10,7 @@ import styled from "styled-components";
 const AppContainer = styled.div`
   margin-top: var(--header-height);
   padding-top: 10px;
-  min-height: calc(100vh - var(--heeader-height));
 `;
-
 
 const App = () => {
   return (

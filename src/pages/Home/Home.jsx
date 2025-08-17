@@ -8,18 +8,21 @@ import { Fullscreen } from '../../components/common';
 import useInfiniteScroll from '../../hooks/useInfiniteScroll';
 import useScreenSize from '../../hooks/useScreenSize';
 
-const VideosContainer = styled.div`
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-`;
-
 const Home = () => {
+  const { screenSize, SCREEN_SIZES } = useScreenSize();
+  const VideosContainer = styled.div`
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: ${props => props.isMobile ? 'column' : 'row'};
+    align-items: ${props => props.isMobile ? 'center' : 'flex-start'};
+    justify-content: ${props => !props.isMobile ? 'center' : 'flex-start'};
+  `;
+
   const [videos, setVideos] = useState([]);
   const [nextPageToken, setNextPageToken] = useState(null);
   const [requestConfig, setRequestConfig] = useState(POPULAR_VIDEOS_REQUEST);
   const { result, isLoading, hasError } = useAPI(API_ENDPOINTS.getVideos, requestConfig);
-  const screenSize = useScreenSize();
 
   useEffect(() => {
     if (result && result.nextPageToken !== nextPageToken) {
@@ -52,14 +55,15 @@ const Home = () => {
 
   return (
     <Suspense fallback={<Fullscreen className="fitHeader"><Loader /></Fullscreen>}>
-      <VideosContainer>
+      <VideosContainer isMobile={screenSize === SCREEN_SIZES.MOBILE_SMALL}>
         {
           videos.length > 0 && videos.map(video => {
             return <VideoCard 
+              key={video.id}
               id={video.id}
               title={video.snippet.title}
               thumbnails={video.snippet.thumbnails}
-              cardsPerRow={screenSize === 'mobile' ? 1 : screenSize === 'tablet' ? 3 : 5}
+              cardsPerRow={screenSize === SCREEN_SIZES.MOBILE_SMALL ? 1 : screenSize === SCREEN_SIZES.MOBILE_LARGE ? 2 : screenSize === SCREEN_SIZES.TABLET ? 3 : 5}
             />;
           })
         }

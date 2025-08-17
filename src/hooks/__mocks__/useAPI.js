@@ -38,6 +38,22 @@ export const moreVideosMock = Object.freeze({
   hasError: null
 });
 
+export const responsiveMock = Object.freeze({
+  result: {
+    items: [
+      { contentDetails: { id: '1' }, snippet: { title: 'Video 1' } },
+      { contentDetails: { id: '2' }, snippet: { title: 'Video 2' } },
+      { contentDetails: { id: '3' }, snippet: { title: 'Video 3' } },
+      { contentDetails: { id: '4' }, snippet: { title: 'Video 4' } },
+      { contentDetails: { id: '5' }, snippet: { title: 'Video 5' } },
+      { contentDetails: { id: '6' }, snippet: { title: 'Video 6' } }
+    ],
+    nextPageToken: 'ABC123'
+  },
+  isLoading: false,
+  hasError: null
+});
+
 // Default export returns a controlled mock (can override in tests)
 let currentMock = defaultResult;
 

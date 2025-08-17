@@ -1,36 +1,48 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { useParams } from 'react-router'
-import { env, VIDEO_PLAYER_HEIGHT_RATIO, VIDEO_PLAYER_WIDTH_PERCENT } from '../../utils/constants';
 import styled from 'styled-components';
-import RelatedVideos from '../RelatedVideos/RelatedVideos';
+import useScreenSize from '../../hooks/useScreenSize';
 
-const PlayerContainer = styled.div`
-  grid-column: 1 / 3;
-`;
+  const PlayerContainer = styled.div`
+    grid-column: 1;
+    margin-bottom: ${props => props.isMobile ? '20px' : '0'};
+    display: flex;
+    justify-content: center;
+  `;
 
-const Player = styled.div`
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-`;
+  const PlayerWrapper = styled.div`
+    width: ${props => props.width}px;
+    height: ${props => props.height}px;
+  `;
+
+  const Player = styled.div`
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  `;
 
 const VideoPlayer = () => {
+  const { screenSize, SCREEN_SIZES } = useScreenSize();
+
   const containerRef = useRef(null);
   const playerRef = useRef(null);
   const ytPlayerRef = useRef(null);
+  const [ wrapperSize, setWrapperSize ] = useState({width: 0, height: 0});
   const { videoId } = useParams();
 
   const resizeHandler = () => {
-    const playerWidth = window.innerWidth * VIDEO_PLAYER_WIDTH_PERCENT;
-    const playerHeight = playerWidth * VIDEO_PLAYER_HEIGHT_RATIO;
-
-    containerRef.current.style.width = `${playerWidth}px`;
-    containerRef.current.style.height = `${playerHeight}px`;
+    const width = containerRef.current.offsetWidth;
+    const playerWidth = width;
+    const playerHeight = width * (9/16);
+    setWrapperSize({width: playerWidth, height: playerHeight});
   }
 
+  
+
   useEffect(() => {
-    if (containerRef) {
+    if (containerRef && playerRef) {
       window.addEventListener('resize', resizeHandler);
     }
 
@@ -39,41 +51,43 @@ const VideoPlayer = () => {
     return () => {
       window.removeEventListener('resize', resizeHandler);
     }
-  }, []);
+  }, [screenSize]);
 
   useEffect(() => {
     if(!videoId) return;
 
-    if (ytPlayerRef.current && ytPlayerRef.current.loadVideoById) ytPlayerRef.current.loadVideoById(videoId);
-
-    const scriptTags = [...document.getElementsByTagName('script')];
-    const youtubeScript = scriptTags.filter((script) => {
-      return script.src === env.YOUTUBE_IFRAME_API_URL;
-    });
-    
-    if(youtubeScript.length == 0) {
-      let tag = document.createElement('script');
-      tag.src = env.YOUTUBE_IFRAME_API_URL;
-      document.body.appendChild(tag);
+    if (ytPlayerRef.current && ytPlayerRef.current.loadVideoById) {
+      ytPlayerRef.current.loadVideoById(videoId);
+      return;
     }
 
-    window.onYouTubeIframeAPIReady = () => {
+    const createPlayer = () => {
       ytPlayerRef.current = new window.YT.Player(playerRef.current, {
         videoId,
-        playerVars: {
-          controls: 1
-        }
-      })
+        playerVars: { controls: 1 }
+      });
+    };
+    
+    if (window.YT && window.YT.Player) {
+      createPlayer();
+    } else {
+      window.onYouTubeIframeAPIReady = createPlayer;
     }
   }, [videoId]);
 
   return (
-    <>
-      <PlayerContainer ref={containerRef}>
-        <Player id="player" ref={playerRef}/>
-      </PlayerContainer>
-      <RelatedVideos videoId={videoId}/>
-    </>
+    <PlayerContainer
+      ref={containerRef}
+      isMobile={screenSize !== SCREEN_SIZES.DESKTOP}
+    >
+      <PlayerWrapper
+        width={wrapperSize.width}
+        height={wrapperSize.height}
+        id="player-wrapper"
+      >
+        <Player id="player" ref={playerRef} />
+      </PlayerWrapper>
+    </PlayerContainer>
   );
 }
 
