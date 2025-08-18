@@ -13,6 +13,8 @@ const Home = () => {
   const VideosContainer = styled.div`
     display: flex;
     width: 100%;
+    height: 100%;
+    overflow-y: scroll;
     flex-wrap: wrap;
     flex-direction: ${props => props.isMobile ? 'column' : 'row'};
     align-items: ${props => props.isMobile ? 'center' : 'flex-start'};

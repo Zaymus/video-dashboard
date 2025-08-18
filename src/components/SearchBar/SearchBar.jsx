@@ -5,9 +5,10 @@ import { SROnly } from '../common';
 const SearchContainer = styled.div`
   width: 35%;
   height: 40px;
+  padding-left: 10px;
   border-radius: 25px;
   border: 2px solid var(--primary);
-  background: var(--surface-dark);
+  background: var(--background-dark);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -15,8 +16,7 @@ const SearchContainer = styled.div`
 
 const SearchInput = styled.input`
   height: 100%;
-  flex: 1;
-  padding: 0 10px 0 20px;
+  width: 80%;
   font-size: 1rem;
   border: none;
   background-color: var(--background-dark);
@@ -29,7 +29,7 @@ const SearchInput = styled.input`
 
 const SearchButton = styled.button`
   height: 100%;
-  flex: 0.1;
+  width: 20%;
   border: none;
   font-size: 1.2rem;
   background-color: var(--surface-dark);

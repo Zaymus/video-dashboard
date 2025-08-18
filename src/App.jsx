@@ -10,15 +10,16 @@ import styled from "styled-components";
 const AppContainer = styled.div`
   margin-top: var(--header-height);
   padding-top: 10px;
+  height: calc(100vh - var(--header-height) - 10px);
 `;
 
 const App = () => {
   return (
     <>
       <Suspense fallback={<Fullscreen><Loader /></Fullscreen>}>
-        <Header />
         <AppContainer>
             <BrowserRouter>
+              <Header />
               <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/Video/:videoId" element={<Video />}/>
