@@ -12,19 +12,20 @@ const Title = styled.p`
   margin-top: 5px;
 `;
 
-const VideoCard = ({ id, title, thumbnails, cardsPerRow=5 }) => {
-  const Card = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: calc(var(--videos-usable-width) / ${cardsPerRow} - var(--videos-gutter-margin) - 0.1px);
-    cursor: pointer;
-    border-radius: 15px;
-    padding: 20px;
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: calc(var(--videos-usable-width) / ${props => props.cardsPerRow} - var(--videos-gutter-margin) - 0.1px);
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 20px;
 
-    &:hover {
-      background-color: var(--border-dark);
-    }
-  `;
+  &:hover {
+    background-color: var(--border-dark);
+  }
+`;
+
+const VideoCard = ({ id, title, thumbnails, cardsPerRow=5 }) => {
 
   const navigate = useNavigate();
   const clickHandler = () => {
@@ -32,7 +33,7 @@ const VideoCard = ({ id, title, thumbnails, cardsPerRow=5 }) => {
   };
 
   return (
-    <Card key={id} onClick={clickHandler}>
+    <Card key={id} onClick={clickHandler} role="link" aria-description={title} tabIndex={0} cardsPerRow={cardsPerRow}>
       <Suspense fallback={<Loader />}>
         <Thumbnail thumbnails={thumbnails} />
       </Suspense>

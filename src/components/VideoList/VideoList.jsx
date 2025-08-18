@@ -3,15 +3,14 @@ import useScreenSize from "../../hooks/useScreenSize";
 import VideoCard from "../VideoCard";
 import styled from "styled-components";
 
-  const VideoListContainer = styled.div`
-    display: flex;
-    flex-direction: ${props => props.isMobile ? 'row' : 'column'};
-    flex-wrap: ${props => props.isMobile ? 'wrap' : 'nowrap'};
-    align-items: center;
-    height: calc(100vh - var(--header-height) - 10px);
-    overflow-y: ${props => props.isDesktop ? 'scroll' : 'visible'};
-  `;
-
+const VideoListContainer = styled.div`
+  display: flex;
+  flex-direction: ${props => props.ismobile ? 'row' : 'column'};
+  flex-wrap: ${props => props.ismobile ? 'wrap' : 'nowrap'};
+  align-items: center;
+  height: calc(100vh - var(--header-height) - 10px);
+  overflow-y: ${props => props.isdesktop ? 'scroll' : 'visible'};
+`;
 
 const VideoList = ({ videos }) => {
   const { screenSize, SCREEN_SIZES } = useScreenSize();
@@ -20,8 +19,8 @@ const VideoList = ({ videos }) => {
   return (
     <VideoListContainer
       ref={containerRef}
-      isMobile={[SCREEN_SIZES.MOBILE_SMALL, SCREEN_SIZES.MOBILE_LARGE, SCREEN_SIZES.TABLET].includes(screenSize)}
-      isDesktop={screenSize === SCREEN_SIZES.DESKTOP}
+      ismobile={[SCREEN_SIZES.MOBILE_SMALL, SCREEN_SIZES.MOBILE_LARGE, SCREEN_SIZES.TABLET].includes(screenSize)}
+      isdesktop={screenSize === SCREEN_SIZES.DESKTOP}
     >
       {
         videos?.length > 0 && videos.map(video => {

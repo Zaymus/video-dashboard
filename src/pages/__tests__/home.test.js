@@ -12,15 +12,10 @@ import Home from '../Home';
 import { render, screen, act, waitFor } from '@testing-library/react';
 import { setUseAPIMock, loadingMock, errorMock, defaultResult, moreVideosMock, responsiveMock } from '../../hooks/useAPI';
 
-let scrollY;
-Object.defineProperty(window, 'innerHeight', { writable: true, configurable: true, value: 1000 });
 Object.defineProperty(window, 'innerWidth', { writable: true, configurable: true, value: 1920 });
-Object.defineProperty(document.documentElement, 'scrollHeight', { writable: true, configurable: true, value: 3000 });
-Object.defineProperty(window, 'scrollY', { configurable: true, get: () => scrollY});
 
 describe('Home Page', () => {
   beforeEach(() => {
-    scrollY = 0;
     window.innerWidth = 1920;
     jest.resetAllMocks();
   })
@@ -62,11 +57,12 @@ describe('Home Page', () => {
         expect(screen.getByText(video.snippet.title)).toBeInTheDocument();
       });
     });
+
+    const scrollContainer = screen.getByTestId('video-container');
     
     act(() => {
       setUseAPIMock(moreVideosMock);
-      scrollY = 2000;
-      window.dispatchEvent(new Event("scroll"));
+      scrollContainer.dispatchEvent(new Event("scroll"));
     });
 
     await waitFor(() => {

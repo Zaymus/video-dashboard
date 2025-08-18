@@ -5,11 +5,11 @@ import RelatedVideos from '../../components/RelatedVideos';
 
 const VideoContainer = styled.div`
     display: grid;
-    grid-template-columns: ${props => props.isDesktop ? '75% 25%' : '100%'};
-    column-gap: ${props => props.isDesktop ? '20px' : '5px'};
+    grid-template-columns: ${props => props.isdesktop ? '75% 25%' : '100%'};
+    column-gap: ${props => props.isdesktop ? '20px' : '5px'};
     height: calc(100vh - var(--header-height) - 10px);
-    padding: ${props => props.isMobile ? '0 10px' : '0 40px'};
-    overflow-y: ${props => props.isDesktop ? 'visible' : 'scroll'};
+    padding: ${props => props.ismobile ? '0 10px' : '0 40px'};
+    overflow-y: ${props => props.isdesktop ? 'visible' : 'scroll'};
   `;
 
 const Video = () => {
@@ -17,8 +17,8 @@ const Video = () => {
 
   return (
     <VideoContainer 
-      isDesktop={screenSize === SCREEN_SIZES.DESKTOP}
-      isMobile={screenSize === SCREEN_SIZES.MOBILE_SMALL}
+      isdesktop={screenSize === SCREEN_SIZES.DESKTOP}
+      ismobile={screenSize === SCREEN_SIZES.MOBILE_SMALL}
     >
       <VideoPlayer />
       <RelatedVideos />

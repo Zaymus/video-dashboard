@@ -1,22 +1,110 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Header component test matches snapshot 1`] = `
+exports[`Header component test matches snapshot in desktop view 1`] = `
 <div>
   <div
-    class="sc-hjsuWn jianIX"
+    class="sc-hjsuWn gQEMCU"
   >
+    <a
+      aria-current="page"
+      class="active"
+      data-discover="true"
+      href="/"
+    >
+      Video Dashboard
+    </a>
     <div
-      class="sc-ggWZvA ZMjlW"
+      class="sc-ggWZvA hbUyvE"
     >
       <input
-        class="sc-dTvVRJ FRDnM"
+        class="sc-dTvVRJ iUDQVI"
         name="search"
         placeholder="Search"
         spellcheck="true"
         type="search"
       />
       <button
-        class="sc-jwTyAe eKrelh"
+        class="sc-jwTyAe jXdFZU"
+      >
+        <span
+          class="sc-fhHczv jxaKYX"
+        >
+          Search
+        </span>
+        <i
+          class="fa-solid fa-magnifying-glass"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header component test matches snapshot in mobile view 1`] = `
+<div>
+  <div
+    class="sc-hjsuWn gQEMCU"
+  >
+    <a
+      aria-current="page"
+      class="active"
+      data-discover="true"
+      href="/"
+    >
+      Video Dashboard
+    </a>
+    <div
+      class="sc-ggWZvA hbUyvE"
+    >
+      <input
+        class="sc-dTvVRJ iUDQVI"
+        name="search"
+        placeholder="Search"
+        spellcheck="true"
+        type="search"
+      />
+      <button
+        class="sc-jwTyAe jXdFZU"
+      >
+        <span
+          class="sc-fhHczv jxaKYX"
+        >
+          Search
+        </span>
+        <i
+          class="fa-solid fa-magnifying-glass"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Header component test matches snapshot in tablet view 1`] = `
+<div>
+  <div
+    class="sc-hjsuWn gQEMCU"
+  >
+    <a
+      aria-current="page"
+      class="active"
+      data-discover="true"
+      href="/"
+    >
+      Video Dashboard
+    </a>
+    <div
+      class="sc-ggWZvA hbUyvE"
+    >
+      <input
+        class="sc-dTvVRJ iUDQVI"
+        name="search"
+        placeholder="Search"
+        spellcheck="true"
+        type="search"
+      />
+      <button
+        class="sc-jwTyAe jXdFZU"
       >
         <span
           class="sc-fhHczv jxaKYX"

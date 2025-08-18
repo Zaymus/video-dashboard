@@ -1,27 +1,51 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import useDebounce from "./useDebounce";
 
-const useInfiniteScroll = ({ callback, delay=200, offset=0, isLoading=false} ) => {
+const useInfiniteScroll = ({ callback, delay=200, offset=0, isLoading=false, targetRef }) => {
   const callbackRef = useRef(callback);
 
   useEffect(() => {
     callbackRef.current = callback;
   }, [callback]);
 
-  const scrollHandler = () => {
-    const scrollTop = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const docHeight = document.documentElement.scrollHeight;
+  const scrollHandler = useCallback(() => {
+    if (isLoading) return;
 
-    if (!isLoading && scrollTop + windowHeight >= docHeight - offset) callbackRef.current();
-  }
+    const target = targetRef?.current;
+    const scrollTop = target ? target.scrollTop : window.scrollY;
+    const clientHeight = target ? target.clientHeight : window.innerHeight;
+    const scrollHeight = target ? target.scrollHeight : document.documentElement.scrollHeight;
 
-  const debouncedScroll = useDebounce(scrollHandler, delay);
+    if (scrollTop + clientHeight >= scrollHeight - offset) {
+      callbackRef.current();
+    }
+  }, [isLoading, offset, targetRef]);
+
+  const debouncedScrollHandler = useDebounce(scrollHandler, delay);
 
   useEffect(() => {
-    window.addEventListener('scroll', debouncedScroll);
-    return () => window.removeEventListener('scroll', debouncedScroll);
-  }, [debouncedScroll])
+    let target = targetRef?.current || window;
+    let observer;
+
+    if (targetRef && !target.current) {
+      observer = new MutationObserver(() => {
+        if (targetRef.current) {
+          target = targetRef.current;
+          target.addEventListener("scroll", debouncedScrollHandler);
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+    } else {
+      target.addEventListener("scroll", debouncedScrollHandler);
+    }
+
+    return () => {
+      if (observer) observer.disconnect();
+      if (target) target.removeEventListener("scroll", debouncedScrollHandler);
+    };
+  }, [targetRef, debouncedScrollHandler]);
 }
 
 export default useInfiniteScroll;

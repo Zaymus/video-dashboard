@@ -5,7 +5,7 @@ import useScreenSize from '../../hooks/useScreenSize';
 
   const PlayerContainer = styled.div`
     grid-column: 1;
-    margin-bottom: ${props => props.isMobile ? '20px' : '0'};
+    margin-bottom: ${props => props.ismobile ? '20px' : '0'};
     display: flex;
     justify-content: center;
   `;
@@ -78,7 +78,7 @@ const VideoPlayer = () => {
   return (
     <PlayerContainer
       ref={containerRef}
-      isMobile={screenSize !== SCREEN_SIZES.DESKTOP}
+      ismobile={screenSize !== SCREEN_SIZES.DESKTOP}
     >
       <PlayerWrapper
         width={wrapperSize.width}

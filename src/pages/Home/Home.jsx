@@ -1,4 +1,4 @@
-import { useEffect, useState, Suspense, useCallback } from 'react';
+import { useEffect, useState, Suspense, useCallback, useRef } from 'react';
 import Loader from '../../components/common/Loader';
 import VideoCard from '../../components/VideoCard';
 import useAPI from '../../hooks/useAPI';
@@ -8,29 +8,30 @@ import { Fullscreen } from '../../components/common';
 import useInfiniteScroll from '../../hooks/useInfiniteScroll';
 import useScreenSize from '../../hooks/useScreenSize';
 
+const VideosContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  flex-wrap: ${props => props.ismobile ? 'nowrap' : 'wrap'};
+  flex-direction: ${props => props.ismobile ? 'column' : 'row'};
+  align-items: ${props => props.ismobile ? 'center' : 'flex-start'};
+  justify-content: ${props => !props.ismobile ? 'center' : 'flex-start'};
+`;
+
 const Home = () => {
   const { screenSize, SCREEN_SIZES } = useScreenSize();
-  const VideosContainer = styled.div`
-    display: flex;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    flex-wrap: wrap;
-    flex-direction: ${props => props.isMobile ? 'column' : 'row'};
-    align-items: ${props => props.isMobile ? 'center' : 'flex-start'};
-    justify-content: ${props => !props.isMobile ? 'center' : 'flex-start'};
-  `;
 
   const [videos, setVideos] = useState([]);
   const [nextPageToken, setNextPageToken] = useState(null);
   const [requestConfig, setRequestConfig] = useState(POPULAR_VIDEOS_REQUEST);
   const { result, isLoading, hasError } = useAPI(API_ENDPOINTS.getVideos, requestConfig);
+  const videoContainerRef = useRef(null);
 
   useEffect(() => {
-    if (result && result.nextPageToken !== nextPageToken) {
-      setNextPageToken(result.nextPageToken);
-      setVideos(prev => [...prev, ...result.items]);
-    }
+    if (!result || result.nextPageToken === nextPageToken) return;
+    setNextPageToken(result.nextPageToken);
+    setVideos(prev => [...prev, ...result.items]);
   }, [result])
 
   const loadNextPage = useCallback(() => {
@@ -51,13 +52,15 @@ const Home = () => {
 
   useInfiniteScroll({
     callback: loadNextPage,
+    isLoading,
     delay: 300,
-    isLoading
+    offset: 50,
+    targetRef: videoContainerRef
   });
 
   return (
     <Suspense fallback={<Fullscreen className="fitHeader"><Loader /></Fullscreen>}>
-      <VideosContainer isMobile={screenSize === SCREEN_SIZES.MOBILE_SMALL}>
+      <VideosContainer ismobile={screenSize === SCREEN_SIZES.MOBILE_SMALL} ref={videoContainerRef} data-testid="video-container">
         {
           videos.length > 0 && videos.map(video => {
             return <VideoCard 

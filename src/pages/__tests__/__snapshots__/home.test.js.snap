@@ -3,82 +3,107 @@
 exports[`Home Page Matches snapshot in large mobile view 1`] = `
 <div>
   <div
-    class="sc-fszimp dfnBGm"
+    class="sc-ggWZvA iVwzZN"
+    data-testid="video-container"
   >
     <div
-      class="sc-etsjJW ggnOgq"
+      aria-description="Video 1"
+      cardsperrow="2"
+      class="sc-jwTyAe bIsNtm"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 1
       </p>
     </div>
     <div
-      class="sc-fYmhhH qRnIp"
+      aria-description="Video 2"
+      cardsperrow="2"
+      class="sc-jwTyAe bIsNtm"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 2
       </p>
     </div>
     <div
-      class="sc-koBvLg gepkNA"
+      aria-description="Video 3"
+      cardsperrow="2"
+      class="sc-jwTyAe bIsNtm"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 3
       </p>
     </div>
     <div
-      class="sc-DZJJV fOycTX"
+      aria-description="Video 4"
+      cardsperrow="2"
+      class="sc-jwTyAe bIsNtm"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 4
       </p>
     </div>
     <div
-      class="sc-kUouGy fgSTVR"
+      aria-description="Video 5"
+      cardsperrow="2"
+      class="sc-jwTyAe bIsNtm"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 5
       </p>
     </div>
     <div
-      class="sc-bjMIFn htVkrL"
+      aria-description="Video 6"
+      cardsperrow="2"
+      class="sc-jwTyAe bIsNtm"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 6
       </p>
@@ -90,82 +115,107 @@ exports[`Home Page Matches snapshot in large mobile view 1`] = `
 exports[`Home Page Matches snapshot in small mobile view 1`] = `
 <div>
   <div
-    class="sc-bbbBoY fSnIyn"
+    class="sc-ggWZvA bgVUQh"
+    data-testid="video-container"
   >
     <div
-      class="sc-cdmAjP hPWYRt"
+      aria-description="Video 1"
+      cardsperrow="1"
+      class="sc-jwTyAe eUBeXh"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 1
       </p>
     </div>
     <div
-      class="sc-jytpVa irsVAg"
+      aria-description="Video 2"
+      cardsperrow="1"
+      class="sc-jwTyAe eUBeXh"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 2
       </p>
     </div>
     <div
-      class="sc-eknHtZ haGIq"
+      aria-description="Video 3"
+      cardsperrow="1"
+      class="sc-jwTyAe eUBeXh"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 3
       </p>
     </div>
     <div
-      class="sc-pYNGo ijhkAP"
+      aria-description="Video 4"
+      cardsperrow="1"
+      class="sc-jwTyAe eUBeXh"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 4
       </p>
     </div>
     <div
-      class="sc-cCVJLD jsHJLw"
+      aria-description="Video 5"
+      cardsperrow="1"
+      class="sc-jwTyAe eUBeXh"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 5
       </p>
     </div>
     <div
-      class="sc-jYczwO fBkcLO"
+      aria-description="Video 6"
+      cardsperrow="1"
+      class="sc-jwTyAe eUBeXh"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 6
       </p>
@@ -177,82 +227,107 @@ exports[`Home Page Matches snapshot in small mobile view 1`] = `
 exports[`Home Page Matches snapshot in tablet view 1`] = `
 <div>
   <div
-    class="sc-fhfEft fYTZru"
+    class="sc-ggWZvA iVwzZN"
+    data-testid="video-container"
   >
     <div
-      class="sc-bAehkN hyedll"
+      aria-description="Video 1"
+      cardsperrow="3"
+      class="sc-jwTyAe iCgvIb"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 1
       </p>
     </div>
     <div
-      class="sc-gahYZc dUSyxg"
+      aria-description="Video 2"
+      cardsperrow="3"
+      class="sc-jwTyAe iCgvIb"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 2
       </p>
     </div>
     <div
-      class="sc-bSFBcf gqKCcK"
+      aria-description="Video 3"
+      cardsperrow="3"
+      class="sc-jwTyAe iCgvIb"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 3
       </p>
     </div>
     <div
-      class="sc-gsJsQu gMNIXH"
+      aria-description="Video 4"
+      cardsperrow="3"
+      class="sc-jwTyAe iCgvIb"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 4
       </p>
     </div>
     <div
-      class="sc-ibashp SakQv"
+      aria-description="Video 5"
+      cardsperrow="3"
+      class="sc-jwTyAe iCgvIb"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 5
       </p>
     </div>
     <div
-      class="sc-blIAwI kILnW"
+      aria-description="Video 6"
+      cardsperrow="3"
+      class="sc-jwTyAe iCgvIb"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 6
       </p>
@@ -264,82 +339,107 @@ exports[`Home Page Matches snapshot in tablet view 1`] = `
 exports[`Home Page renders additional videos from useAPI result when scrollbar is at bottom 1`] = `
 <div>
   <div
-    class="sc-fVHBlr iiYxoB"
+    class="sc-ggWZvA iVwzZN"
+    data-testid="video-container"
   >
     <div
-      class="sc-gLaqbQ gImMEA"
+      aria-description="Video 1"
+      cardsperrow="5"
+      class="sc-jwTyAe dcUvpJ"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 1
       </p>
     </div>
     <div
-      class="sc-ipUnzB gXfDzC"
+      aria-description="Video 2"
+      cardsperrow="5"
+      class="sc-jwTyAe dcUvpJ"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 2
       </p>
     </div>
     <div
-      class="sc-eQwNpu cSvTBg"
+      aria-description="Video 3"
+      cardsperrow="5"
+      class="sc-jwTyAe dcUvpJ"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 3
       </p>
     </div>
     <div
-      class="sc-gvqKNf fPguDv"
+      aria-description="Video 4"
+      cardsperrow="5"
+      class="sc-jwTyAe dcUvpJ"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 4
       </p>
     </div>
     <div
-      class="sc-cOpnSz cnEVnn"
+      aria-description="Video 5"
+      cardsperrow="5"
+      class="sc-jwTyAe dcUvpJ"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 5
       </p>
     </div>
     <div
-      class="sc-kjwdDK ZIZIp"
+      aria-description="Video 6"
+      cardsperrow="5"
+      class="sc-jwTyAe dcUvpJ"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 6
       </p>
@@ -351,43 +451,57 @@ exports[`Home Page renders additional videos from useAPI result when scrollbar i
 exports[`Home Page renders videos from useAPI result 1`] = `
 <div>
   <div
-    class="sc-dTvVRJ dSSsTl"
+    class="sc-ggWZvA iVwzZN"
+    data-testid="video-container"
+    style=""
   >
     <div
-      class="sc-hwkwBN jxUKGv"
+      aria-description="Video 1"
+      cardsperrow="5"
+      class="sc-jwTyAe dcUvpJ"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 1
       </p>
     </div>
     <div
-      class="sc-kNOymR iFLlLI"
+      aria-description="Video 2"
+      cardsperrow="5"
+      class="sc-jwTyAe dcUvpJ"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 2
       </p>
     </div>
     <div
-      class="sc-dYwGCk ctcOWF"
+      aria-description="Video 3"
+      cardsperrow="5"
+      class="sc-jwTyAe dcUvpJ"
+      role="link"
+      tabindex="0"
     >
       <img
         alt="Thumbnail image"
-        class="sc-jJLAfE ldElst"
+        class="sc-hjsuWn dvtMdC"
       />
       <p
-        class="sc-jwTyAe eTofHv"
+        class="sc-dTvVRJ dmYGZj"
       >
         Video 3
       </p>
@@ -399,7 +513,8 @@ exports[`Home Page renders videos from useAPI result 1`] = `
 exports[`Home Page shows error message when hasError is set 1`] = `
 <div>
   <div
-    class="sc-dntSTA eWlVgx"
+    class="sc-ggWZvA iVwzZN"
+    data-testid="video-container"
   >
     <p>
       API error
@@ -411,7 +526,8 @@ exports[`Home Page shows error message when hasError is set 1`] = `
 exports[`Home Page shows loader when isLoading is true 1`] = `
 <div>
   <div
-    class="sc-eqYatC ezGcFW"
+    class="sc-ggWZvA iVwzZN"
+    data-testid="video-container"
   >
     <div
       class="sc-bRKDuR fMrgJQ"

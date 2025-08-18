@@ -3,7 +3,11 @@
 exports[`VideoCard Component matches snapshot 1`] = `
 <div>
   <div
-    class="sc-fhHczv kHoESd"
+    aria-description="Test Video"
+    cardsperrow="5"
+    class="sc-fhHczv hWwhpM"
+    role="link"
+    tabindex="0"
   >
     <div
       class="sc-bRKDuR fMrgJQ"
