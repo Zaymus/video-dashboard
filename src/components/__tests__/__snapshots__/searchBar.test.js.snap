@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`SearchBar component testing handlers work as intended with no ref 1`] = `
+exports[`SearchBar component testing Desktop/Tablet SearchBar handlers work as intended with no ref 1`] = `
 <div>
   <div
     class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
@@ -14,6 +14,7 @@ exports[`SearchBar component testing handlers work as intended with no ref 1`] =
     />
     <button
       class="sc-dYwGCk jjuflB"
+      data-testid="search-button"
     >
       <span
         class="sc-fhHczv jxaKYX"
@@ -29,7 +30,7 @@ exports[`SearchBar component testing handlers work as intended with no ref 1`] =
 </div>
 `;
 
-exports[`SearchBar component testing handlers work as intended with no ref 2`] = `
+exports[`SearchBar component testing Desktop/Tablet SearchBar handlers work as intended with no ref 2`] = `
 <div>
   <div
     class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
@@ -43,6 +44,7 @@ exports[`SearchBar component testing handlers work as intended with no ref 2`] =
     />
     <button
       class="sc-dYwGCk jjuflB"
+      data-testid="search-button"
     >
       <span
         class="sc-fhHczv jxaKYX"
@@ -58,7 +60,7 @@ exports[`SearchBar component testing handlers work as intended with no ref 2`] =
 </div>
 `;
 
-exports[`SearchBar component testing matches snapshot - blur 1`] = `
+exports[`SearchBar component testing Desktop/Tablet SearchBar matches snapshot - blur 1`] = `
 <div>
   <div
     class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
@@ -73,6 +75,7 @@ exports[`SearchBar component testing matches snapshot - blur 1`] = `
     />
     <button
       class="sc-dYwGCk jjuflB"
+      data-testid="search-button"
     >
       <span
         class="sc-fhHczv jxaKYX"
@@ -88,7 +91,7 @@ exports[`SearchBar component testing matches snapshot - blur 1`] = `
 </div>
 `;
 
-exports[`SearchBar component testing matches snapshot - button blur 1`] = `
+exports[`SearchBar component testing Desktop/Tablet SearchBar matches snapshot - button blur 1`] = `
 <div>
   <div
     class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
@@ -102,6 +105,7 @@ exports[`SearchBar component testing matches snapshot - button blur 1`] = `
     />
     <button
       class="sc-dYwGCk jjuflB"
+      data-testid="search-button"
     >
       <span
         class="sc-fhHczv jxaKYX"
@@ -117,7 +121,7 @@ exports[`SearchBar component testing matches snapshot - button blur 1`] = `
 </div>
 `;
 
-exports[`SearchBar component testing matches snapshot - button hover 1`] = `
+exports[`SearchBar component testing Desktop/Tablet SearchBar matches snapshot - button hover 1`] = `
 <div>
   <div
     class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
@@ -131,6 +135,7 @@ exports[`SearchBar component testing matches snapshot - button hover 1`] = `
     />
     <button
       class="sc-dYwGCk jjuflB"
+      data-testid="search-button"
     >
       <span
         class="sc-fhHczv jxaKYX"
@@ -146,7 +151,7 @@ exports[`SearchBar component testing matches snapshot - button hover 1`] = `
 </div>
 `;
 
-exports[`SearchBar component testing matches snapshot - focus 1`] = `
+exports[`SearchBar component testing Desktop/Tablet SearchBar matches snapshot - focus 1`] = `
 <div>
   <div
     class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
@@ -161,6 +166,7 @@ exports[`SearchBar component testing matches snapshot - focus 1`] = `
     />
     <button
       class="sc-dYwGCk jjuflB"
+      data-testid="search-button"
     >
       <span
         class="sc-fhHczv jxaKYX"
@@ -176,7 +182,7 @@ exports[`SearchBar component testing matches snapshot - focus 1`] = `
 </div>
 `;
 
-exports[`SearchBar component testing matches snapshot 1`] = `
+exports[`SearchBar component testing Desktop/Tablet SearchBar matches snapshot 1`] = `
 <div>
   <div
     class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
@@ -190,12 +196,293 @@ exports[`SearchBar component testing matches snapshot 1`] = `
     />
     <button
       class="sc-dYwGCk jjuflB"
+      data-testid="search-button"
     >
       <span
         class="sc-fhHczv jxaKYX"
       >
         $
         Search
+      </span>
+      <i
+        class="fa-solid fa-magnifying-glass"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchBar component testing Mobile SearchBar matches snapshot - collapsed 1`] = `
+<div>
+  <div
+    class="sc-ggWZvA sc-jwTyAe jYNhMr buAVEQ"
+  >
+    <div
+      class="sc-jJLAfE linsqF hidden"
+      id="searchBarWrapper"
+    >
+      <div
+        aria-hidden="true"
+        class="sc-hwkwBN cEGuER close"
+        data-testid="back-button"
+        id="back-button"
+      >
+        <i
+          class="fa-solid fa-chevron-left"
+        />
+        <span
+          class="sc-fhHczv jxaKYX"
+        >
+          Close search bar
+        </span>
+      </div>
+      <div
+        class="sc-hjsuWn fpmNqB"
+      >
+        <input
+          aria-hidden="true"
+          class="sc-kNOymR jSwGbX collapsed"
+          id="search-input"
+          name="search"
+          placeholder="Search"
+          spellcheck="true"
+          type="search"
+        />
+      </div>
+    </div>
+    <button
+      class="sc-dYwGCk dNiLGu"
+      data-testid="search-button"
+    >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        $
+        Open search bar
+      </span>
+      <i
+        class="fa-solid fa-magnifying-glass"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchBar component testing Mobile SearchBar matches snapshot - expanded 1`] = `
+<div>
+  <div
+    class="sc-ggWZvA sc-jwTyAe jYNhMr buAVEQ"
+  >
+    <div
+      class="sc-jJLAfE linsqF hidden"
+      id="searchBarWrapper"
+    >
+      <div
+        aria-hidden="true"
+        class="sc-hwkwBN cEGuER close"
+        data-testid="back-button"
+        id="back-button"
+      >
+        <i
+          class="fa-solid fa-chevron-left"
+        />
+        <span
+          class="sc-fhHczv jxaKYX"
+        >
+          Close search bar
+        </span>
+      </div>
+      <div
+        class="sc-hjsuWn fpmNqB"
+      >
+        <input
+          aria-hidden="true"
+          class="sc-kNOymR jSwGbX collapsed"
+          id="search-input"
+          name="search"
+          placeholder="Search"
+          spellcheck="true"
+          type="search"
+        />
+      </div>
+    </div>
+    <button
+      class="sc-dYwGCk dNiLGu"
+      data-testid="search-button"
+    >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        $
+        Open search bar
+      </span>
+      <i
+        class="fa-solid fa-magnifying-glass"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchBar component testing Mobile SearchBar matches snapshot - expanded 2`] = `
+<div>
+  <div
+    class="sc-ggWZvA sc-jwTyAe jYNhMr buAVEQ expanded"
+  >
+    <div
+      class="sc-jJLAfE linsqF"
+      id="searchBarWrapper"
+    >
+      <div
+        aria-hidden="false"
+        class="sc-hwkwBN cEGuER open"
+        data-testid="back-button"
+        id="back-button"
+      >
+        <i
+          class="fa-solid fa-chevron-left"
+        />
+        <span
+          class="sc-fhHczv jxaKYX"
+        >
+          Close search bar
+        </span>
+      </div>
+      <div
+        class="sc-hjsuWn fpmNqB"
+      >
+        <input
+          aria-hidden="false"
+          class="sc-kNOymR jSwGbX"
+          id="search-input"
+          name="search"
+          placeholder="Search"
+          spellcheck="true"
+          type="search"
+        />
+      </div>
+    </div>
+    <button
+      class="sc-dYwGCk dNiLGu"
+      data-testid="search-button"
+    >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        $
+        Open search bar
+      </span>
+      <i
+        class="fa-solid fa-magnifying-glass"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchBar component testing Mobile SearchBar matches snapshot - expanded to collapsed 1`] = `
+<div>
+  <div
+    class="sc-ggWZvA sc-jwTyAe jYNhMr buAVEQ expanded"
+  >
+    <div
+      class="sc-jJLAfE linsqF"
+      id="searchBarWrapper"
+    >
+      <div
+        aria-hidden="false"
+        class="sc-hwkwBN cEGuER open"
+        data-testid="back-button"
+        id="back-button"
+      >
+        <i
+          class="fa-solid fa-chevron-left"
+        />
+        <span
+          class="sc-fhHczv jxaKYX"
+        >
+          Close search bar
+        </span>
+      </div>
+      <div
+        class="sc-hjsuWn fpmNqB"
+      >
+        <input
+          aria-hidden="false"
+          class="sc-kNOymR jSwGbX"
+          id="search-input"
+          name="search"
+          placeholder="Search"
+          spellcheck="true"
+          type="search"
+        />
+      </div>
+    </div>
+    <button
+      class="sc-dYwGCk dNiLGu"
+      data-testid="search-button"
+    >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        $
+        Open search bar
+      </span>
+      <i
+        class="fa-solid fa-magnifying-glass"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SearchBar component testing Mobile SearchBar matches snapshot - expanded to collapsed 2`] = `
+<div>
+  <div
+    class="sc-ggWZvA sc-jwTyAe jYNhMr buAVEQ"
+  >
+    <div
+      class="sc-jJLAfE linsqF hidden"
+      id="searchBarWrapper"
+    >
+      <div
+        aria-hidden="true"
+        class="sc-hwkwBN cEGuER close"
+        data-testid="back-button"
+        id="back-button"
+      >
+        <i
+          class="fa-solid fa-chevron-left"
+        />
+        <span
+          class="sc-fhHczv jxaKYX"
+        >
+          Close search bar
+        </span>
+      </div>
+      <div
+        class="sc-hjsuWn fpmNqB"
+      >
+        <input
+          aria-hidden="true"
+          class="sc-kNOymR jSwGbX collapsed"
+          id="search-input"
+          name="search"
+          placeholder="Search"
+          spellcheck="true"
+          type="search"
+        />
+      </div>
+    </div>
+    <button
+      class="sc-dYwGCk dNiLGu"
+      data-testid="search-button"
+    >
+      <span
+        class="sc-fhHczv jxaKYX"
+      >
+        $
+        Open search bar
       </span>
       <i
         class="fa-solid fa-magnifying-glass"

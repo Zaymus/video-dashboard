@@ -25,6 +25,7 @@ exports[`Header component test matches snapshot in mobile view - expanded 1`] = 
         <div
           aria-hidden="false"
           class="sc-kNOymR hSaumW open"
+          data-testid="back-button"
           id="back-button"
         >
           <i
@@ -52,6 +53,7 @@ exports[`Header component test matches snapshot in mobile view - expanded 1`] = 
       </div>
       <button
         class="sc-lgpSej gIiDoE"
+        data-testid="search-button"
       >
         <span
           class="sc-ggWZvA jmVoQc"
@@ -91,6 +93,7 @@ exports[`Header component test matches snapshot in mobile view 1`] = `
         <div
           aria-hidden="true"
           class="sc-kNOymR hSaumW close"
+          data-testid="back-button"
           id="back-button"
         >
           <i
@@ -118,6 +121,7 @@ exports[`Header component test matches snapshot in mobile view 1`] = `
       </div>
       <button
         class="sc-lgpSej gIiDoE"
+        data-testid="search-button"
       >
         <span
           class="sc-ggWZvA jmVoQc"
@@ -159,6 +163,7 @@ exports[`Header component test matches snapshot in tablet view 1`] = `
       />
       <button
         class="sc-lgpSej gGfjpP"
+        data-testid="search-button"
       >
         <span
           class="sc-ggWZvA jmVoQc"

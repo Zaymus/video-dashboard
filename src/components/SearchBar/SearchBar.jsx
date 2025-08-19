@@ -127,7 +127,7 @@ const SearchBtn = styled.button`
 
 const SearchButton = ({ ismobile=false, onClick }) => {
   return (
-    <SearchBtn ismobile={ismobile} onClick={onClick}>
+    <SearchBtn ismobile={ismobile} onClick={onClick} data-testid="search-button" >
       <SROnly>${ismobile ? 'Open search bar' : 'Search'}</SROnly>
       <i className="fa-solid fa-magnifying-glass" />
     </SearchBtn>
@@ -187,6 +187,7 @@ const MobileSearchBar = () => {
     <MobileContainer className={expanded ? 'expanded' : null}>
         <SearchBarWrapper id="searchBarWrapper" className={hideSearch ? 'hidden' : null}>
           <BackButton
+            data-testid="back-button"
             id="back-button"
             className={expanded ? 'open' : 'close'}
             onClick={() => backClickHandler()}

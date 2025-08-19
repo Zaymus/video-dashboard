@@ -14,65 +14,109 @@ describe('SearchBar component testing', () => {
     jest.useRealTimers();
   });
 
-  test('handlers work as intended with no ref', () => {
-    jest.spyOn(React, 'useRef').mockReturnValueOnce(null);
-    const { container } = render(<SearchBar />);
+  describe('Desktop/Tablet SearchBar', () => {
+    test('handlers work as intended with no ref', () => {
+      jest.spyOn(React, 'useRef').mockReturnValueOnce(null);
+      const { container } = render(<SearchBar />);
 
-    fireEvent["focus"](screen.getByPlaceholderText("Search"));
-    expect(container).toMatchSnapshot();
-    fireEvent["blur"](screen.getByPlaceholderText("Search"));
-    expect(container).toMatchSnapshot();
+      fireEvent["focus"](screen.getByPlaceholderText("Search"));
+      expect(container).toMatchSnapshot();
+      fireEvent["blur"](screen.getByPlaceholderText("Search"));
+      expect(container).toMatchSnapshot();
+    });
+    test('matches snapshot', () => {
+      const { container } = render(<SearchBar />);
+      expect(container).toMatchSnapshot();
+    });
+
+    test('matches snapshot - focus', () => {
+      const { container } = render(<SearchBar />);
+      fireEvent["focus"](screen.getByPlaceholderText("Search"));
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+      expect(container).toMatchSnapshot();
+    });
+
+    test('matches snapshot - blur', () => {
+      const { container } = render(<SearchBar />);
+      fireEvent['focus'](screen.getByPlaceholderText("Search"));
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+
+      fireEvent["blur"](screen.getByPlaceholderText("Search"));
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+      expect(container).toMatchSnapshot();
+    });
+
+    test('matches snapshot - button hover', () => {
+      const { container } = render(<SearchBar />);
+      fireEvent["mouseEnter"](screen.getByPlaceholderText("Search"));
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+
+      expect(container).toMatchSnapshot();
+    });
+
+    test('matches snapshot - button blur', () => {
+      const { container } = render(<SearchBar />);
+      fireEvent["mouseEnter"](screen.getByPlaceholderText("Search"));
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+
+      fireEvent["mouseLeave"](screen.getByPlaceholderText("Search"));
+      act(() => {
+        jest.advanceTimersByTime(500);
+      });
+
+      expect(container).toMatchSnapshot();
+    });
   });
-  test('matches snapshot', () => {
-    const { container } = render(<SearchBar />);
-    expect(container).toMatchSnapshot();
-  });
 
-  test('matches snapshot - focus', () => {
-    const { container } = render(<SearchBar />);
-    fireEvent["focus"](screen.getByPlaceholderText("Search"));
-    act(() => {
-      jest.advanceTimersByTime(500);
+  describe('Mobile SearchBar', () => {
+    beforeAll(() => {
+      window.innerWidth = 425;
     });
-    expect(container).toMatchSnapshot();
-  });
+    test('matches snapshot - collapsed', () => {
+      const { container } = render(<SearchBar />);
 
-  test('matches snapshot - blur', () => {
-    const { container } = render(<SearchBar />);
-    fireEvent['focus'](screen.getByPlaceholderText("Search"));
-    act(() => {
-      jest.advanceTimersByTime(500);
+      expect(container).toMatchSnapshot();
     });
 
-    fireEvent["blur"](screen.getByPlaceholderText("Search"));
-    act(() => {
-      jest.advanceTimersByTime(500);
-    });
-    expect(container).toMatchSnapshot();
-  });
+    test('matches snapshot - expanded', () => {
+      const { container } = render(<SearchBar />);
 
-  test('matches snapshot - button hover', () => {
-    const { container } = render(<SearchBar />);
-    fireEvent["mouseEnter"](screen.getByPlaceholderText("Search"));
-    act(() => {
-      jest.advanceTimersByTime(500);
-    });
+      expect(container).toMatchSnapshot();
 
-    expect(container).toMatchSnapshot();
-  });
+      act(() => {
+        fireEvent.click(screen.getByTestId('search-button'));
+        jest.advanceTimersByTime(1000);
+      });
 
-  test('matches snapshot - button blur', () => {
-    const { container } = render(<SearchBar />);
-    fireEvent["mouseEnter"](screen.getByPlaceholderText("Search"));
-    act(() => {
-      jest.advanceTimersByTime(500);
+      expect(container).toMatchSnapshot();
     });
 
-    fireEvent["mouseLeave"](screen.getByPlaceholderText("Search"));
-    act(() => {
-      jest.advanceTimersByTime(500);
-    });
+    test('matches snapshot - expanded to collapsed', () => {
+      const { container } = render(<SearchBar />);
 
-    expect(container).toMatchSnapshot();
+      act(() => {
+        fireEvent.click(screen.getByTestId('search-button'));
+        jest.advanceTimersByTime(1000);
+      });
+
+      expect(container).toMatchSnapshot();
+
+      act(() => {
+        fireEvent.click(screen.getByTestId('back-button'));
+        jest.advanceTimersByTime(1000);
+      });
+
+       expect(container).toMatchSnapshot();
+    });
   });
 });
