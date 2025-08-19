@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../SearchBar/";
 import { NavLink } from "react-router";
 
 const HeaderContainer = styled.div`

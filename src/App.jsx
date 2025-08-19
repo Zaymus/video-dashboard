@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Home from "./pages/Home";
 import { Loader, Fullscreen } from "./components/common";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import { BrowserRouter, Routes, Route} from 'react-router';
 import Video from './pages/Video';
 import SearchResults from './pages/SearchResults';

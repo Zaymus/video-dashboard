@@ -1,9 +1,10 @@
 import { jest, describe, test, expect, beforeAll, afterAll } from '@jest/globals';
 import { fireEvent, render, screen, act } from '@testing-library/react';
 import React from 'react';
-
+jest.mock('../../utils/env');
 import SearchBar from '../SearchBar/SearchBar';
 
+Object.defineProperty(window, 'innerWidth', { writable: true, configurable: true, value: 1920 });
 describe('SearchBar component testing', () => {
   beforeAll(() => {
     jest.useFakeTimers();
@@ -56,6 +57,7 @@ describe('SearchBar component testing', () => {
     act(() => {
       jest.advanceTimersByTime(500);
     });
+
     expect(container).toMatchSnapshot();
   });
 
@@ -70,6 +72,7 @@ describe('SearchBar component testing', () => {
     act(() => {
       jest.advanceTimersByTime(500);
     });
+
     expect(container).toMatchSnapshot();
   });
 });

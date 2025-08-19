@@ -3,21 +3,22 @@
 exports[`SearchBar component testing handlers work as intended with no ref 1`] = `
 <div>
   <div
-    class="sc-ggWZvA hbUyvE"
+    class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
   >
     <input
-      class="sc-dTvVRJ iUDQVI"
+      class="sc-kNOymR jMKEsd"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-jwTyAe jXdFZU"
+      class="sc-dYwGCk jjuflB"
     >
       <span
         class="sc-fhHczv jxaKYX"
       >
+        $
         Search
       </span>
       <i
@@ -31,21 +32,22 @@ exports[`SearchBar component testing handlers work as intended with no ref 1`] =
 exports[`SearchBar component testing handlers work as intended with no ref 2`] = `
 <div>
   <div
-    class="sc-ggWZvA hbUyvE"
+    class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
   >
     <input
-      class="sc-dTvVRJ iUDQVI"
+      class="sc-kNOymR jMKEsd"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-jwTyAe jXdFZU"
+      class="sc-dYwGCk jjuflB"
     >
       <span
         class="sc-fhHczv jxaKYX"
       >
+        $
         Search
       </span>
       <i
@@ -59,22 +61,23 @@ exports[`SearchBar component testing handlers work as intended with no ref 2`] =
 exports[`SearchBar component testing matches snapshot - blur 1`] = `
 <div>
   <div
-    class="sc-ggWZvA hbUyvE"
+    class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
     style="transition: box-shadow 0.15s linear;"
   >
     <input
-      class="sc-dTvVRJ iUDQVI"
+      class="sc-kNOymR jMKEsd"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-jwTyAe jXdFZU"
+      class="sc-dYwGCk jjuflB"
     >
       <span
         class="sc-fhHczv jxaKYX"
       >
+        $
         Search
       </span>
       <i
@@ -88,21 +91,22 @@ exports[`SearchBar component testing matches snapshot - blur 1`] = `
 exports[`SearchBar component testing matches snapshot - button blur 1`] = `
 <div>
   <div
-    class="sc-ggWZvA hbUyvE"
+    class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
   >
     <input
-      class="sc-dTvVRJ iUDQVI"
+      class="sc-kNOymR jMKEsd"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-jwTyAe jXdFZU"
+      class="sc-dYwGCk jjuflB"
     >
       <span
         class="sc-fhHczv jxaKYX"
       >
+        $
         Search
       </span>
       <i
@@ -116,21 +120,22 @@ exports[`SearchBar component testing matches snapshot - button blur 1`] = `
 exports[`SearchBar component testing matches snapshot - button hover 1`] = `
 <div>
   <div
-    class="sc-ggWZvA hbUyvE"
+    class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
   >
     <input
-      class="sc-dTvVRJ iUDQVI"
+      class="sc-kNOymR jMKEsd"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-jwTyAe jXdFZU"
+      class="sc-dYwGCk jjuflB"
     >
       <span
         class="sc-fhHczv jxaKYX"
       >
+        $
         Search
       </span>
       <i
@@ -144,22 +149,23 @@ exports[`SearchBar component testing matches snapshot - button hover 1`] = `
 exports[`SearchBar component testing matches snapshot - focus 1`] = `
 <div>
   <div
-    class="sc-ggWZvA hbUyvE"
+    class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
     style="transition: box-shadow 0.15s linear; box-shadow: 0px 0px 10px var(--primary);"
   >
     <input
-      class="sc-dTvVRJ iUDQVI"
+      class="sc-kNOymR jMKEsd"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-jwTyAe jXdFZU"
+      class="sc-dYwGCk jjuflB"
     >
       <span
         class="sc-fhHczv jxaKYX"
       >
+        $
         Search
       </span>
       <i
@@ -173,21 +179,22 @@ exports[`SearchBar component testing matches snapshot - focus 1`] = `
 exports[`SearchBar component testing matches snapshot 1`] = `
 <div>
   <div
-    class="sc-ggWZvA hbUyvE"
+    class="sc-ggWZvA sc-dTvVRJ jYNhMr iUfGNI"
   >
     <input
-      class="sc-dTvVRJ iUDQVI"
+      class="sc-kNOymR jMKEsd"
       name="search"
       placeholder="Search"
       spellcheck="true"
       type="search"
     />
     <button
-      class="sc-jwTyAe jXdFZU"
+      class="sc-dYwGCk jjuflB"
     >
       <span
         class="sc-fhHczv jxaKYX"
       >
+        $
         Search
       </span>
       <i

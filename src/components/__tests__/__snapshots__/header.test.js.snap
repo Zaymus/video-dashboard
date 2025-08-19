@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Header component test matches snapshot in desktop view 1`] = `
+exports[`Header component test matches snapshot in desktop view 1`] = `<div />`;
+
+exports[`Header component test matches snapshot in mobile view - expanded 1`] = `
 <div>
   <div
-    class="sc-hjsuWn gQEMCU"
+    class="sc-bRKDuR eWtpjx"
   >
     <a
       aria-current="page"
@@ -14,22 +16,48 @@ exports[`Header component test matches snapshot in desktop view 1`] = `
       Video Dashboard
     </a>
     <div
-      class="sc-ggWZvA hbUyvE"
+      class="sc-dTvVRJ sc-hjsuWn cqfxlF gXYciB expanded"
     >
-      <input
-        class="sc-dTvVRJ iUDQVI"
-        name="search"
-        placeholder="Search"
-        spellcheck="true"
-        type="search"
-      />
+      <div
+        class="sc-hwkwBN hjIdbA"
+        id="searchBarWrapper"
+      >
+        <div
+          aria-hidden="false"
+          class="sc-kNOymR hSaumW open"
+          id="back-button"
+        >
+          <i
+            class="fa-solid fa-chevron-left"
+          />
+          <span
+            class="sc-ggWZvA jmVoQc"
+          >
+            Close search bar
+          </span>
+        </div>
+        <div
+          class="sc-jJLAfE jPTKJC"
+        >
+          <input
+            aria-hidden="false"
+            class="sc-dYwGCk dSftMe"
+            id="search-input"
+            name="search"
+            placeholder="Search"
+            spellcheck="true"
+            type="search"
+          />
+        </div>
+      </div>
       <button
-        class="sc-jwTyAe jXdFZU"
+        class="sc-lgpSej gIiDoE"
       >
         <span
-          class="sc-fhHczv jxaKYX"
+          class="sc-ggWZvA jmVoQc"
         >
-          Search
+          $
+          Open search bar
         </span>
         <i
           class="fa-solid fa-magnifying-glass"
@@ -43,7 +71,7 @@ exports[`Header component test matches snapshot in desktop view 1`] = `
 exports[`Header component test matches snapshot in mobile view 1`] = `
 <div>
   <div
-    class="sc-hjsuWn gQEMCU"
+    class="sc-bRKDuR eWtpjx"
   >
     <a
       aria-current="page"
@@ -54,22 +82,48 @@ exports[`Header component test matches snapshot in mobile view 1`] = `
       Video Dashboard
     </a>
     <div
-      class="sc-ggWZvA hbUyvE"
+      class="sc-dTvVRJ sc-hjsuWn cqfxlF gXYciB"
     >
-      <input
-        class="sc-dTvVRJ iUDQVI"
-        name="search"
-        placeholder="Search"
-        spellcheck="true"
-        type="search"
-      />
+      <div
+        class="sc-hwkwBN hjIdbA hidden"
+        id="searchBarWrapper"
+      >
+        <div
+          aria-hidden="true"
+          class="sc-kNOymR hSaumW close"
+          id="back-button"
+        >
+          <i
+            class="fa-solid fa-chevron-left"
+          />
+          <span
+            class="sc-ggWZvA jmVoQc"
+          >
+            Close search bar
+          </span>
+        </div>
+        <div
+          class="sc-jJLAfE jPTKJC"
+        >
+          <input
+            aria-hidden="true"
+            class="sc-dYwGCk dSftMe collapsed"
+            id="search-input"
+            name="search"
+            placeholder="Search"
+            spellcheck="true"
+            type="search"
+          />
+        </div>
+      </div>
       <button
-        class="sc-jwTyAe jXdFZU"
+        class="sc-lgpSej gIiDoE"
       >
         <span
-          class="sc-fhHczv jxaKYX"
+          class="sc-ggWZvA jmVoQc"
         >
-          Search
+          $
+          Open search bar
         </span>
         <i
           class="fa-solid fa-magnifying-glass"
@@ -83,7 +137,7 @@ exports[`Header component test matches snapshot in mobile view 1`] = `
 exports[`Header component test matches snapshot in tablet view 1`] = `
 <div>
   <div
-    class="sc-hjsuWn gQEMCU"
+    class="sc-bRKDuR eWtpjx"
   >
     <a
       aria-current="page"
@@ -94,21 +148,22 @@ exports[`Header component test matches snapshot in tablet view 1`] = `
       Video Dashboard
     </a>
     <div
-      class="sc-ggWZvA hbUyvE"
+      class="sc-dTvVRJ sc-jwTyAe cqfxlF oeQNM"
     >
       <input
-        class="sc-dTvVRJ iUDQVI"
+        class="sc-dYwGCk kkxkVw"
         name="search"
         placeholder="Search"
         spellcheck="true"
         type="search"
       />
       <button
-        class="sc-jwTyAe jXdFZU"
+        class="sc-lgpSej gGfjpP"
       >
         <span
-          class="sc-fhHczv jxaKYX"
+          class="sc-ggWZvA jmVoQc"
         >
+          $
           Search
         </span>
         <i
